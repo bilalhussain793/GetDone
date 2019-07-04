@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp">
+
+
+
+        <EditText
+            android:id="@+id/inputSearchEditText"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:layout_height="40dp"
+
+            android:gravity="center|left"
+            android:hint="Task title:e.g Clean my house"
+            android:inputType="text"
+
+            android:background="@drawable/editstyle"/>
+
+            <EditText
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:paddingLeft="5dp"
+
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+
+                android:background="@drawable/editstyle"
+                android:hint="Describe your task in more detail"
+                android:gravity="top|left"
+
+                android:inputType="textMultiLine"
+                android:maxLines="20"
+
+                android:minLines="1"
+
+                android:scrollbars="vertical" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:prompt="@string/spinner_title"
+
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What type of task it is?"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Physical" />
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Online" />
+            </RadioGroup>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How may Persons are required for this task?"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+            <EditText
+                android:id="@+id/Personinput"
+
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+
+                android:gravity="center|left"
+                android:hint="eg. 1-20"
+                android:inputType="number"
+
+                android:background="@drawable/editstyle"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Budget:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+            <EditText
+                android:id="@+id/Budget"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:gravity="center|left"
+                android:hint=""
+                android:inputType="number"
+
+                android:background="@drawable/editstyle"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+            <EditText
+                android:id="@+id/location"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:gravity="center|left"
+                android:hint=""
+                android:inputType="number"
+
+                android:background="@drawable/editstyle"/>
+
+            <Button
+                android:id="@+id/btn_sign_in"
+                android:background="@drawable/bg_btn_red"
+
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="@dimen/space20"
+                android:text="Post"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt16" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

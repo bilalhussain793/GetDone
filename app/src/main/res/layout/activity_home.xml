@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+
+
+        <!-- LinearLayout Inside ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Categories:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <!-- create a Linear Layout with horizontal orientation and weightSum property -->
+
+            <LinearLayout
+                android:id="@+id/firstLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="30dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                   android:src="@drawable/gardening" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/cleaning" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/homeservice" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/textLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="30dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+
+                    android:paddingLeft="10dp"
+                    android:text="Gardening"
+                    android:src="@drawable/gardening" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="0.6"
+
+                    android:paddingLeft="0dp"
+                    android:text="Cleaning"
+                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="0.6"
+
+                    android:paddingLeft="0dp"
+
+                    android:text="Home Services" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/secondLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="30dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/gardening" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/cleaning" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/homeservice" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/text1Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="30dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+
+                    android:paddingLeft="10dp"
+                    android:text="Gardening"
+                    android:src="@drawable/gardening" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="0.6"
+
+                    android:paddingLeft="0dp"
+                    android:text="Cleaning"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="0.6"
+
+                    android:paddingLeft="0dp"
+
+                    android:text="Home Services" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/thirdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="30dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/gardening" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/cleaning" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/homeservice" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/text3Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="30dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!-- place one TextView and one EditText inside layout using weight property -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.6"
+
+                    android:paddingLeft="10dp"
+                    android:text="Gardening"
+                    android:src="@drawable/gardening" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="0.6"
+
+                    android:paddingLeft="0dp"
+                    android:text="Cleaning"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="0.6"
+
+                    android:paddingLeft="0dp"
+
+                    android:text="Home Services" />
+
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylcerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="745dp"
+                tools:layout_editor_absoluteY="-51dp" >
+            </android.support.v7.widget.RecyclerView>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

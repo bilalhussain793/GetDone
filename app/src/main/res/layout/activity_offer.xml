@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Offer To Make"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="28sp" />
+
+
+            <EditText
+                android:id="@+id/inputSearchEditText"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:textColorHint="#000000"
+                android:hint="Enter your Amount"
+                android:layout_width="match_parent"
+                android:paddingLeft="5dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note:"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Our Company will charge 6% as service charges."
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+               />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Why Do you want to do this task?"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/inputtaskEditText"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:focusable="false"
+                android:hint="Enter here!"
+                android:paddingLeft="5dp"
+                android:enabled="false"
+                android:textColorHint="#000000"
+                android:visibility="visible" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Note:"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="agreement......"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                />
+
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I agree to agreement." />
+
+            <Button
+                    android:id="@+id/btn_off"
+                    android:background="@drawable/bg_btn_red"
+
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginBottom="@dimen/space20"
+                    android:text="MAKE OFFER"
+                    android:layout_marginLeft="50dp"
+                    android:textAllCaps="false"
+                android:layout_marginTop="20dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/txt16" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

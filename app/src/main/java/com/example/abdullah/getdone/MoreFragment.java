@@ -9,6 +9,7 @@ import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -45,6 +46,13 @@ public class MoreFragment extends Fragment {
         lv=view.findViewById(R.id.lv);
         adapter=new ArrayAdapter(getContext(),R.layout.support_simple_spinner_dropdown_item,arrayList);
         lv.setAdapter(adapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getContext(), ""+arrayList.get(i), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return view;
 

@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
+    buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId "com.img.getdone"
         minSdkVersion 15

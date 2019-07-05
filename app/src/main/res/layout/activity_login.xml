@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BCD1CCC0"
+    android:background="#0099D6"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -36,7 +36,7 @@
             android:textStyle="normal" />
 
         <TextView
-            android:id="@+id/tv_sign_in"
+            android:id="@+id/tv_sign_up2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign up"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/ll_bottom"
 
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="44dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -77,11 +77,12 @@
                 android:textSize="@dimen/txt10" />
 
             <EditText
-                android:id="@+id/et_username"
+                android:id="@+id/et_username2"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginBottom="10dp"
                 android:hint="Username"
+                android:inputType="textEmailAddress"
                 android:lines="1"
                 android:text=""
                 android:textColor="@android:color/white"
@@ -98,7 +99,7 @@
                 android:layout_marginTop="15dp"/>
 
             <EditText
-                android:id="@+id/et_pass"
+                android:id="@+id/et_passw"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginBottom="10dp"
@@ -117,19 +118,26 @@
             android:id="@+id/ll_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbx"
+                android:textColor="#FFFFFF"
+                android:background="#2FC0C0C0"
+                android:text="Keep me signed in"/>
 
             <Button
-                android:id="@+id/btn_sign_in"
+                android:id="@+id/btn_sign_in2"
                 android:layout_width="@dimen/btn_width"
                 android:layout_height="@dimen/btn_height"
                 android:layout_marginBottom="@dimen/space20"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/btn_white_selector"
                 android:text="Login"
                 android:textAllCaps="false"
                 android:textColor="#dc1616"
-
                 android:textSize="@dimen/txt16" />
 
 

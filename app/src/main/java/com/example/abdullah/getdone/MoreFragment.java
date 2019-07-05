@@ -56,10 +56,6 @@ public class MoreFragment extends Fragment {
 
         return view;
 
-
     }
 
 }
-
-
-

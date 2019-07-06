@@ -84,7 +84,7 @@
                 />
 
             <EditText
-                android:id="@+id/input11Search1Edit1Text"
+                android:id="@+id/ema"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
@@ -112,7 +112,7 @@
                 />
 
             <EditText
-                android:id="@+id/input11Text1"
+                android:id="@+id/subj"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
@@ -140,7 +140,7 @@
                 />
 
             <EditText
-                android:id="@+id/input11Text11"
+                android:id="@+id/msg"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"

@@ -34,7 +34,7 @@
                 />
 
             <EditText
-                android:id="@+id/inputSearchEditText"
+                android:id="@+id/user"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
@@ -62,7 +62,7 @@
                 />
 
             <EditText
-                android:id="@+id/inputSearch1Edit1Text"
+                android:id="@+id/email"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
@@ -89,7 +89,7 @@
                 />
 
             <EditText
-                android:id="@+id/inputSearch1Edit11Text"
+                android:id="@+id/phn"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
@@ -116,7 +116,7 @@
                 />
 
             <EditText
-                android:id="@+id/input1Search1Edit1Text"
+                android:id="@+id/pass"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
@@ -144,7 +144,7 @@
                 />
 
             <EditText
-                android:id="@+id/input11Search1Edit1Text"
+                android:id="@+id/cpass"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
@@ -166,7 +166,7 @@
 
 
             <Button
-                android:id="@+id/btn_sign_in"
+                android:id="@+id/update"
                 android:background="@drawable/bg_btn_red"
 
                 android:layout_width="@dimen/btn_width"

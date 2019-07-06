@@ -44,7 +44,7 @@
                 />
 
             <EditText
-                android:id="@+id/inputSearchEditText"
+                android:id="@+id/bud"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
@@ -75,7 +75,7 @@
 
 
             <Button
-                android:id="@+id/btn_off"
+                android:id="@+id/update"
                 android:background="@drawable/bg_btn_red"
 
                 android:layout_width="@dimen/btn_width"

@@ -62,7 +62,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/space40"
             android:text="Sign Up"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="@dimen/txt22" />
 
 

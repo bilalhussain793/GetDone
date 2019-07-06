@@ -45,6 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Name"
+                android:id="@+id/nam"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
@@ -63,6 +64,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
             <TextView
+                android:id="@+id/typ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Physical"
@@ -83,6 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Open"
+                android:id="@+id/stat"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
@@ -100,6 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="online work here"
+                android:id="@+id/dtail"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"

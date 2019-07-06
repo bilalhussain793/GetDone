@@ -24,7 +24,7 @@
 
 
             <EditText
-                android:id="@+id/inputSearchEditText"
+                android:id="@+id/tit"
 
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"

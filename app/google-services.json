@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "743565391673",
+    "firebase_url": "https://getdone-2c10b.firebaseio.com",
+    "project_id": "getdone-2c10b",
+    "storage_bucket": "getdone-2c10b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743565391673:android:b68e1c1fb7663d50",
+        "android_client_info": {
+          "package_name": "com.img.getdone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743565391673-dq7h7ljfc4s1idmdl1gl43si16v8uq0k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.img.getdone",
+            "certificate_hash": "8c4b806ccb8c545ddf40b99cb54e0aa6bfc734e6"
+          }
+        },
+        {
+          "client_id": "743565391673-cb47ed2hmie897rq7lfms7bhjuba8o9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC16GJ6l77qUsblW9OpoAzrn_8sYm5ypXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743565391673-cb47ed2hmie897rq7lfms7bhjuba8o9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

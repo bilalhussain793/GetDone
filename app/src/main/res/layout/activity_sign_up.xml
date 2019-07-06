@@ -60,10 +60,24 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/iv_back"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="@dimen/space40"
+            android:layout_marginBottom="10dp"
             android:text="Sign Up"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/txt22" />
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"/>
+
+        <Button
+            android:id="@+id/buttonLoadPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Click to get picture"
+            android:layout_gravity="center"/>
 
 
 <ScrollView
@@ -182,6 +196,15 @@
                 android:textColor="#000000"
                 android:textColorHint="@color/txt_hint"
                 android:textSize="@dimen/txt16" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space5"
+                android:text="Picture"
+                android:textColor="#000000"
+                android:textSize="@dimen/txt10" />
+
+
         </LinearLayout>
 </ScrollView>
 

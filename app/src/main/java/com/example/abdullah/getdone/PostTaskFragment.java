@@ -2,6 +2,8 @@ package com.example.abdullah.getdone;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,9 +15,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Random;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 public class PostTaskFragment extends Fragment {
@@ -24,7 +33,7 @@ public class PostTaskFragment extends Fragment {
     private Fragment baseContext;
     private int contentView;
 
-    EditText title,describtion,person,bud,locaton;
+    EditText title,description,person,bud,locaton,unm;
     RadioButton physical,online;
 
     String Title,Dis,Per,Bud,Loc;
@@ -39,20 +48,23 @@ public class PostTaskFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_post_task, container, false);
 
         title=view.findViewById(R.id.tit);
-        describtion=view.findViewById(R.id.desc);
+        description=view.findViewById(R.id.desc);
         person=view.findViewById(R.id.Personinput);
         bud=view.findViewById(R.id.Budget);
         locaton=view.findViewById(R.id.location);
         physical= view.findViewById(R.id.radioButton);
         online=view.findViewById(R.id.radioButton1);
         sign=view.findViewById(R.id.btn_sign_in);
+        unm=view.findViewById(R.id.usernames);
+
+        unm.setText(UserDetails.username);
 
 
         sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Title=title.getText().toString();
-                Dis=describtion.getText().toString();
+                Dis=description.getText().toString();
                 Per=person.getText().toString();
                 Bud=bud.getText().toString();
                 Loc=locaton.getText().toString();
@@ -61,9 +73,9 @@ public class PostTaskFragment extends Fragment {
                 if(title.length()==0){
                     title.setError("Empty!");
                 }
-                if(describtion.length()==0)
+                if(description.length()==0)
                 {
-                    describtion.setError("Empty");
+                    description.setError("Empty");
                 }
                 if(person.length()==0)
                 {
@@ -78,6 +90,26 @@ public class PostTaskFragment extends Fragment {
                     locaton.setError("Empty");
                 }
                 else{
+
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myRef = database.getReference("posttask/"+Title+Bud);
+
+
+                    myRef.child("Title").setValue(Title);
+                    myRef.child("Description").setValue(Dis);
+                    myRef.child("Budget").setValue(Bud);
+                    myRef.child("Person").setValue(Per);
+                    myRef.child("Location").setValue(Loc);
+                    myRef.child("UserName").setValue(unm.getText().toString());
+
+                    RadioGroup radioGroup=view.findViewById(R.id.rgbb);
+                    RadioButton radioButton;
+                    int selectedId=radioGroup.getCheckedRadioButtonId();
+                    radioButton=(RadioButton)view.findViewById(selectedId);
+                    Toast.makeText(getContext(),radioButton.getText(),Toast.LENGTH_SHORT).show();
+                    myRef.child("Type").setValue(radioButton.getText());
+
+                    Toast.makeText(getContext(), "Task Posted\n Successful", Toast.LENGTH_SHORT).show();
 
                     //here write
 

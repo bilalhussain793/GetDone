@@ -52,14 +52,7 @@ public class Login extends AppCompatActivity {
         checkBox=findViewById(R.id.cbx);
 
 
-        SharedPreferences prefs = getSharedPreferences("LOGIN", MODE_PRIVATE);
-        int r = prefs.getInt("flg", 0);
-        if (r == 2) {
-            startActivity(new Intent(new Intent(Login.this,Navbar.class)));
-            finish();
-        }else{
-            Toast.makeText(this, "Login here", Toast.LENGTH_SHORT).show();
-        }
+
 
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +97,7 @@ public class Login extends AppCompatActivity {
                             editor.putInt("flg", 2);
                             editor.putString("nm",NM.getText().toString());
                             editor.apply();
+                            UserDetails.username=NM.getText().toString();
                             startActivity(new Intent(Login.this,Navbar.class));
                             pd.dismiss();
                         }else{
@@ -124,7 +118,6 @@ public class Login extends AppCompatActivity {
                     NM.setError("Invalid User");
                 }
 
-
             }
 
             @Override
@@ -136,5 +129,4 @@ public class Login extends AppCompatActivity {
         });
 
     }
-
 }

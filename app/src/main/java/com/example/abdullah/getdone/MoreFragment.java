@@ -1,6 +1,8 @@
 package com.example.abdullah.getdone;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 public class MoreFragment extends Fragment {
@@ -50,7 +54,42 @@ public class MoreFragment extends Fragment {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getContext(), ""+arrayList.get(i), Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getContext(), ""+arrayList.get(i), Toast.LENGTH_SHORT).show();
+
+                if(arrayList.get(i).equals("About us")){
+
+                    startActivity(new Intent(getContext(),about_us.class));
+                }
+               else if(arrayList.get(i).equals("Contact us")){
+
+                    startActivity(new Intent(getContext(),contact_us.class));
+                }
+               else if(arrayList.get(i).equals("Update Profile")){
+
+                    startActivity(new Intent(getContext(),update_profile.class));
+                }
+              else if(arrayList.get(i).equals("Term and Conditions")){
+
+                    startActivity(new Intent(getContext(),terms.class));
+                }
+                else if(arrayList.get(i).equals("Logout")){
+
+                    SharedPreferences.Editor editor = getActivity().getSharedPreferences("LOGIN", MODE_PRIVATE).edit();
+                    editor.putInt("flg", 0);
+                    editor.putString("nm", "");
+
+                    editor.apply();
+                    startActivity(new Intent(getContext(), MainActivity.class));
+
+
+
+                    startActivity(new Intent(getContext(),Login.class));
+                }
+                else if(arrayList.get(i).equals("Deactivate my account")){
+
+                    startActivity(new Intent(getContext(),Login.class));
+                }
+
             }
         });
 

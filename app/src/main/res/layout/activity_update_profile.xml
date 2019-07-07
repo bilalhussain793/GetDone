@@ -43,7 +43,9 @@
                 android:layout_width="match_parent"
                 android:paddingLeft="5dp"
                 android:layout_height="40dp"
-
+                android:editable="false"
+                android:focusable="false"
+                android:clickable="false"
                 android:gravity="center|left"
 
                 android:inputType="text"

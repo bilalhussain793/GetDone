@@ -51,7 +51,18 @@ public class Login extends AppCompatActivity {
 
         checkBox=findViewById(R.id.cbx);
 
+        SharedPreferences prefs = getSharedPreferences("LOGIN", MODE_PRIVATE);
+        int r = prefs.getInt("flg", 0);
+        String na=prefs.getString("nm",null);
+        UserDetails.username=na;
 
+        if (r == 2) {
+            startActivity(new Intent(Login.this, Navbar.class));
+
+
+        }else{
+            Toast.makeText(this, "Login here", Toast.LENGTH_SHORT).show();
+        }
 
 
         bt_login.setOnClickListener(new View.OnClickListener() {

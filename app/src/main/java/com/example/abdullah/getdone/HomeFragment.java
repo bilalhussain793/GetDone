@@ -53,10 +53,57 @@ public class HomeFragment extends Fragment {
 
         lv.setAdapter(adapter);
 
-
         return view;
 
 
     }
+//    public void getdata(){
+//        String url = "https://getdone-2c10b.firebaseio.com/posttask.json";
+//
+//
+//        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>(){
+//            @Override
+//            public void onResponse(String s) {
+//                if(s.equals("null")){
+//                    Toast.makeText(getActivity(), "no data", Toast.LENGTH_LONG).show();
+//                }
+//                else{
+//                    Toast.makeText(getActivity(), ""+s, Toast.LENGTH_SHORT).show();
+//                    try {
+//                        JSONArray obj = new JSONArray(s);
+//                        ArrayList<String> arr=new ArrayList<String>();
+//                        prc.add(obj.getString(1));
+//
+////
+////                        if(!obj.has(user)){
+////                            Toast.makeText(Login.this, "user not found", Toast.LENGTH_LONG).show();
+////                        }
+////                        else if(obj.getJSONObject(user).getString("password").equals(pass)){
+////                            UserDetails.username = user;
+////                            UserDetails.password = pass;
+////                            startActivity(new Intent(Login.this, Users.class));
+////                        }
+////                        else {
+////                            Toast.makeText(Login.this, "incorrect password", Toast.LENGTH_LONG).show();
+////                        }
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//
+//
+//            }
+//        },new Response.ErrorListener(){
+//            @Override
+//            public void onErrorResponse(VolleyError volleyError) {
+//                System.out.println("" + volleyError);
+//                Toast.makeText(getActivity(), "Volley Error", Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
+//
+//        RequestQueue rQueue = Volley.newRequestQueue(getActivity());
+//        rQueue.add(request);
+//    }
 
 }

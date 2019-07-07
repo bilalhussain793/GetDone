@@ -102,17 +102,16 @@ public class PostTaskFragment extends Fragment {
                     myRef.child("Location").setValue(Loc);
                     myRef.child("UserName").setValue(unm.getText().toString());
 
+
+
                     RadioGroup radioGroup=view.findViewById(R.id.rgbb);
                     RadioButton radioButton;
                     int selectedId=radioGroup.getCheckedRadioButtonId();
                     radioButton=(RadioButton)view.findViewById(selectedId);
                     Toast.makeText(getContext(),radioButton.getText(),Toast.LENGTH_SHORT).show();
                     myRef.child("Type").setValue(radioButton.getText());
-
                     Toast.makeText(getContext(), "Task Posted\n Successful", Toast.LENGTH_SHORT).show();
-
                     //here write
-
                 }
 
             }

@@ -37,7 +37,6 @@
                 android:gravity="center|left"
                 android:hint="Task title:e.g Clean my house"
                 android:inputType="text"
-
                 android:background="@drawable/editstyle"/>
 
             <EditText

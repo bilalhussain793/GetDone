@@ -208,48 +208,7 @@
 
 
                </LinearLayout>
-               <LinearLayout
-                   android:id="@+id/thirdLayout"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="20dp"
-                   android:paddingLeft="30dp"
-                   android:orientation="horizontal"
-                   android:weightSum="3">
 
-                   <!-- place one TextView and one EditText inside layout using weight property -->
-
-                   <ImageView
-                       android:layout_width="30dp"
-                       android:layout_height="70dp"
-                       android:layout_marginRight="10dp"
-                       android:layout_marginLeft="20dp"
-                       android:layout_weight="0.6"
-                       android:gravity="center_vertical"
-                       android:paddingLeft="10dp"
-                       android:src="@drawable/gardening" />
-                   <ImageView
-                       android:layout_width="30dp"
-                       android:layout_height="70dp"
-                       android:layout_marginRight="10dp"
-                       android:layout_marginLeft="20dp"
-                       android:layout_weight="0.6"
-                       android:gravity="center_vertical"
-                       android:paddingLeft="10dp"
-                       android:src="@drawable/cleaning" />
-                   <ImageView
-                       android:layout_width="30dp"
-                       android:layout_height="70dp"
-                       android:layout_marginRight="10dp"
-                       android:layout_marginLeft="20dp"
-                       android:layout_weight="0.6"
-                       android:gravity="center_vertical"
-                       android:paddingLeft="10dp"
-                       android:src="@drawable/homeservice" />
-
-
-
-               </LinearLayout>
                <LinearLayout
                    android:id="@+id/text3Layout"
                    android:layout_width="match_parent"
@@ -299,7 +258,7 @@
                <ListView
                    android:id="@+id/recylcerView"
                    android:layout_width="match_parent"
-                   android:layout_height="match_parent"
+                   android:layout_height="350dp"
                    tools:layout_editor_absoluteX="745dp"
                    tools:layout_editor_absoluteY="-51dp" >
                </ListView>

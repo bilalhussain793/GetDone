@@ -5,6 +5,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,6 +22,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,6 +45,7 @@ public class HomeFragment extends Fragment {
     ArrayList<String> prc=new ArrayList<String>();
     ArrayList<String> ofr=new ArrayList<String>();
     ArrayList<String> loc=new ArrayList<String>();
+    DatabaseReference databaseReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -47,11 +55,69 @@ public class HomeFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
 
+
+        databaseReference= FirebaseDatabase.getInstance().getReference("posttask");
+
         lv=view.findViewById(R.id.recylcerView);
+
+        desc.add("Clean my house");
+        prc.add("Rs. 3832");
+        ofr.add("offers 9");
+        loc.add("lahore");
+
+        desc.add("Need a tutor");
+        prc.add("Rs. 5002");
+        ofr.add("offers 5");
+        loc.add("lahore");
+
+        desc.add("need a writer 500 rs per page");
+        prc.add("Rs. 5000");
+        ofr.add("10");
+        loc.add("lahore");
+
+        desc.add("I want a co-worker");
+        prc.add("Rs. 50000");
+        ofr.add("offers 4");
+        loc.add("lahore");
 //
-        ListAdapt adapter=new ListAdapt(getActivity(),desc,prc,ofr,loc);
+        final ListAdapt adapter=new ListAdapt(getActivity(),desc,prc,ofr,loc);
 
         lv.setAdapter(adapter);
+
+//        databaseReference.addChildEventListener(new ChildEventListener() {
+//            @Override
+//            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+//
+//                String value =dataSnapshot.getValue(POST.class).toString();
+//
+//                desc.add(value);
+//                prc.add("3832");
+//                ofr.add("ahmas");
+//                loc.add("lahore");
+//               // adapter.notifyDataSetChanged();
+//
+//            }
+//
+//            @Override
+//            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+//
+//            }
+//
+//            @Override
+//            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+//
+//            }
+//
+//            @Override
+//            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
 
         return view;
 
@@ -61,7 +127,7 @@ public class HomeFragment extends Fragment {
 //        String url = "https://getdone-2c10b.firebaseio.com/posttask.json";
 //
 //
-//        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>(){
+//        StringRequest request = new StringRequest(Request.Meth/od.GET, url, new Response.Listener<String>(){
 //            @Override
 //            public void onResponse(String s) {
 //                if(s.equals("null")){

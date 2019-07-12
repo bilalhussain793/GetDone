@@ -13,6 +13,8 @@ EditText price,why;
 CheckBox agree;
 Button offer;
 
+int a;
+
 String retail,reson;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ String retail,reson;
         offer=findViewById(R.id.btn_off);
         agree=findViewById(R.id.checkBox);
 
+        a=34;
 
 
         offer.setOnClickListener(new View.OnClickListener() {

@@ -43,9 +43,9 @@
                 android:layout_width="match_parent"
                 android:paddingLeft="5dp"
                 android:layout_height="40dp"
-                android:editable="false"
-                android:focusable="false"
-                android:clickable="false"
+
+
+
                 android:gravity="center|left"
 
                 android:inputType="text"
@@ -79,6 +79,9 @@
                 android:inputType="text"
 
                 android:background="@drawable/editstyle"/>
+
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,11 +104,62 @@
                 android:paddingLeft="5dp"
                 android:layout_height="40dp"
 
+
                 android:gravity="center|left"
 
-                android:inputType="text"
+                android:inputType="number"
 
                 android:background="@drawable/editstyle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cnic:"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="0dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/cnic"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:paddingLeft="5dp"
+                android:layout_height="40dp"
+
+                android:gravity="center|left"
+
+                android:inputType="number"
+
+                android:background="@drawable/editstyle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Type:"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="0dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:prompt="@string/spinner_title"
+
+
+
+                />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,7 +184,7 @@
 
                 android:gravity="center|left"
 
-                android:inputType="text"
+                android:inputType="textPassword"
 
                 android:background="@drawable/editstyle"/>
 
@@ -158,7 +212,7 @@
 
                 android:gravity="center|left"
 
-                android:inputType="text"
+                android:inputType="textPassword"
 
                 android:background="@drawable/editstyle"/>
 

@@ -1,12 +1,16 @@
 package com.example.abdullah.getdone;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class activity_dtl_task extends AppCompatActivity {
 
     TextView name,type,status,location,budget,last_date,no_persons,type_of_task,desc;
+     Button offer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,9 @@ public class activity_dtl_task extends AppCompatActivity {
         last_date=findViewById(R.id.lstdate);
         no_persons=findViewById(R.id.No_of_persons);
         type_of_task=findViewById(R.id.cat);
+        offer=findViewById(R.id.btn_off);
         desc=findViewById(R.id.dsc);
+
 
 
 
@@ -47,6 +53,20 @@ public class activity_dtl_task extends AppCompatActivity {
         no_persons.setText(No_Of_Persons);
         type_of_task.setText(Type_of_Task);
         desc.setText(Desc);
+
+        offer.setOnClickListener(new View.OnClickListener(){//Calling on click listener for Add Button
+
+            public void onClick( View v)//calling the onClick function
+            {
+                Intent intent = new Intent(v.getContext(), offer.class);
+
+
+                intent.putExtra("id", id);
+
+                v.getContext().startActivity(intent);
+
+
+            }});
 
 
 

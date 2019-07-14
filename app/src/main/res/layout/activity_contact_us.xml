@@ -58,22 +58,20 @@
 
             <EditText
                 android:id="@+id/input11Text"
-                android:editable="false"
-                android:focusable="false"
-                android:clickable="false"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginRight="15dp"
-                android:layout_centerVertical="true"
+
                 android:layout_width="match_parent"
-                android:paddingLeft="5dp"
                 android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/editstyle"
+
 
                 android:gravity="center|left"
 
                 android:inputType="text"
-
-                android:background="@drawable/editstyle"/>
+                android:paddingLeft="5dp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -28,6 +28,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:text="Title"
+                android:id="@+id/tvtitle"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="28sp" />
 
@@ -51,6 +52,34 @@
                 android:textSize="18sp"
                 />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="desc"
+                android:id="@+id/dsc"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Type Of Task:"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Physical"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                />
 
 
 
@@ -58,7 +87,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Type Of Task:"
+                android:text="Category:"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
@@ -94,7 +123,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Task Details:"
+                android:text="location:"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
@@ -103,12 +132,45 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="online work here"
-                android:id="@+id/dtail"
+                android:id="@+id/location"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
                 />
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Date:"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="online work here"
+                android:id="@+id/lstdate"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Of Persons:"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="online work here"
+                android:id="@+id/No_of_persons"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -132,6 +194,7 @@
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
                     android:text="Rs.2000"
+                    android:id="@+id/budget"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="20sp"
                     android:textStyle="bold" />

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099D6"
+    android:background="#ffffff"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/iv_logo"
         android:layout_width="321dp"
-        android:layout_height="86dp"
+        android:layout_height="186dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="45dp"
         android:layout_marginBottom="20dp"
@@ -39,11 +39,11 @@
             android:id="@+id/tv_sign_up2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="Sign up"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/txt14"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:gravity="center_horizontal"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -62,7 +62,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="141dp"
+            android:layout_height="220dp"
             android:layout_marginBottom="@dimen/space20"
             android:orientation="vertical"
 
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/space5"
                 android:text="USERNAME"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/txt10" />
 
             <EditText
@@ -85,18 +85,18 @@
                 android:inputType="textEmailAddress"
                 android:lines="1"
                 android:text=""
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/txt_hint"
                 android:textSize="@dimen/txt16" />
 
             <TextView
                 android:layout_width="181dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="@dimen/space5"
                 android:text="PASSWORD"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/txt10"
-                android:layout_marginTop="15dp"/>
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/txt10" />
 
             <EditText
                 android:id="@+id/et_passw"
@@ -106,9 +106,17 @@
                 android:hint="PASSWORD"
                 android:inputType="textPassword"
                 android:lines="1"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/txt_hint"
                 android:textSize="@dimen/txt16" />
+            <CheckBox
+                android:id="@+id/cbx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:text="Keep me signed in"
+                android:textColor="@color/colorPrimaryDark" />
+
 
 
         </LinearLayout>
@@ -120,24 +128,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/cbx"
-                android:textColor="#FFFFFF"
-                android:background="#2FC0C0C0"
-                android:text="Keep me signed in"/>
+
 
             <Button
                 android:id="@+id/btn_sign_in2"
                 android:layout_width="@dimen/btn_width"
                 android:layout_height="@dimen/btn_height"
-                android:layout_marginBottom="@dimen/space20"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/btn_white_selector"
+                android:layout_marginBottom="@dimen/space20"
+                android:background="@drawable/bg_btn_red"
                 android:text="Login"
                 android:textAllCaps="false"
-                android:textColor="#dc1616"
+                android:textColor="@color/colorAccent"
                 android:textSize="@dimen/txt16" />
 
 

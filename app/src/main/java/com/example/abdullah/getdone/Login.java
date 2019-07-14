@@ -1,8 +1,10 @@
 package com.example.abdullah.getdone;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -28,6 +31,9 @@ import com.google.firebase.database.ValueEventListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Login extends AppCompatActivity {
 
 
@@ -36,6 +42,9 @@ public class Login extends AppCompatActivity {
     CheckBox checkBox;
     FirebaseUserAdapter firebaseUserAdapter=new FirebaseUserAdapter();
     TextView reg_btn;
+    String Name,Password;
+    private String URL_REGIST = "http://192.168.0.74/GetDone/login.php";
+    AlertDialog.Builder builder;
 
     ProgressDialog pd;
     @Override
@@ -48,10 +57,14 @@ public class Login extends AppCompatActivity {
 
         bt_login=findViewById(R.id.btn_sign_in2);
         reg_btn=findViewById(R.id.tv_sign_up2);
+        builder = new AlertDialog.Builder(Login.this);
+
 
         checkBox=findViewById(R.id.cbx);
 
-        SharedPreferences prefs = getSharedPreferences("LOGIN", MODE_PRIVATE);
+
+
+     /*   SharedPreferences prefs = getSharedPreferences("LOGIN", MODE_PRIVATE);
         int r = prefs.getInt("flg", 0);
         String na=prefs.getString("nm",null);
         UserDetails.username=na;
@@ -63,13 +76,31 @@ public class Login extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Login here", Toast.LENGTH_SHORT).show();
         }
-
+*/
 
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                validlogin(et_n,et_ps);
+                Name= et_n.getText().toString();
+                Password= et_ps.getText().toString();
+
+                if(!Name.isEmpty() || !Password.isEmpty()  ){
+                    Userlogin(Name, Password);
+                    startActivity(new Intent(Login.this,Navbar.class));
+
+                }else{
+                    et_n.setError("Please insert Name");
+                    et_ps.setError("Please insert Password");
+
+
+                }
+
+
+
+
+
+                // validlogin(et_n,et_ps);
 
             }
         });
@@ -139,5 +170,48 @@ public class Login extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void Userlogin(final String name, final String password) {
+        int value=1;
+
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_REGIST,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        builder.setTitle("Server Response");
+                        builder.setMessage("Login Successfully");
+                        builder.setPositiveButton("User SignUp Successfully", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                et_n.setText("");
+                                et_ps.setText("");
+                                // etType.setText("");
+
+                            }
+                        });
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Login.this, "Login Error! " + error.toString(), Toast.LENGTH_SHORT).show();
+                error.printStackTrace();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("name",Name);
+                params.put("password",Password);
+
+
+                return params;
+            }
+        };
+        MySingleton.getInstance(Login.this).addTorequestquee(stringRequest);
     }
 }

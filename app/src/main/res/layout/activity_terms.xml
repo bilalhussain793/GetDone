@@ -37,7 +37,26 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Content here!"
+                android:text="1.GetDone provides the GetDone Platform only, enabling Users to publish Posted Tasks and make
+Offers on Posted Tasks.\n\n
+2.Users must be natural persons, but can specify within their account description that they represent
+a business entity.\n\n
+3.At its absolute discretion, GetDone may refuse to allow any person to register or create an account
+with GetDone or cancel or suspend or modify any existing account including if GetDone reasonably
+forms the view that a User&#39;s conduct (including a breach of this Agreement) is detrimental to the
+operation of the GetDone Platform.\n\n
+4.Registering and creating an account with GetDone is free. There is no charge for a Poster to post
+tasks, or for other GetDone Users to review content on the GetDone Platform, including Posted Tasks.\n
+\n
+5.GetDone accepts no liability for any aspect of the Poster and Tasker interaction, including but not
+limited to the description, performance or delivery of Services.\n\n
+6.GetDone has no responsibility and makes no warranty as to the truth or accuracy of any aspect of
+any information provided by Users, including, but not limited to, the ability of Taskers to perform
+tasks or supply items, or the honesty or accuracy of any information provided by Posters or the
+Posters&#39; ability to pay for the Services requested.\n\n
+GetDone has no obligation to any User to assist or involve itself in any dispute between Users,
+although may do so to improve User experience.\n
+"
                 android:layout_marginTop="0dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="10dp"

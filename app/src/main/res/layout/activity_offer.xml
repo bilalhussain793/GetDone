@@ -96,29 +96,7 @@
 
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Please Note:"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="agreement......"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_marginBottom="10dp"
-                android:textSize="18sp"
-                />
 
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="I agree to agreement." />
 
             <Button
                     android:id="@+id/btn_off"

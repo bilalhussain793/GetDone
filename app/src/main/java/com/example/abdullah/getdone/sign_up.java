@@ -1,7 +1,9 @@
 package com.example.abdullah.getdone;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -28,39 +31,157 @@ import com.google.firebase.database.ValueEventListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class sign_up extends AppCompatActivity {
-    private Spinner sp_day,sp_month;
-    private EditText et_phone,et_username,et_email,et_password,et_confirmpass;
-    ArrayAdapter adapter_day,adapter_month;
-    Button reg_btn;
-    String nm,ph,em,pass,cnfm_pass;
-    ProgressDialog pd;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-    FirebaseUserAdapter firebaseUserAdapter =new FirebaseUserAdapter();
+public class sign_up extends AppCompatActivity {
+
+    private EditText etUser_Name, etEmail, etPassword, etConfirm_password, etcnic,etphone;
+    private Button btnSignUp;
+    // private Spinner spinnerType;#10.0.02.2
+    private String URL_REGIST = "http://192.168.8.104/GetDone/register.php";
+    AlertDialog.Builder builder;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        et_username=findViewById(R.id.et_username1);
-        et_email=findViewById(R.id.et_email1);
-        et_phone = findViewById(R.id.et_phn_number1);
-        et_password=findViewById(R.id.et_pass1);
-        et_confirmpass=findViewById(R.id.et_cp);
-
-        reg_btn=findViewById(R.id.btn_sign_up1);
+        etUser_Name = findViewById(R.id.et_username1);
+        etEmail = findViewById(R.id.et_email1);
+        etcnic = findViewById(R.id.et_cnic);
+        etphone = findViewById(R.id.et_phone);
 
 
-        reg_btn.setOnClickListener(new View.OnClickListener() {
+
+
+        etPassword = findViewById(R.id.et_pass1);
+        btnSignUp = findViewById(R.id.btn_sign_up1);
+        builder = new AlertDialog.Builder(sign_up.this);
+//        //Spinner display data
+
+
+        final Spinner spinner =  findViewById(R.id.spinner);
+        List<String> categories = new ArrayList<String>();
+        categories.add("Select type");
+        categories.add("Buyer");
+        categories.add("Seller");
+
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
+        // Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // attaching data adapter to spinner
+        spinner.setAdapter(dataAdapter);
+
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                addusermethod();
+            public void onClick(View v) {
+                String name = etUser_Name.getText().toString();
+                String email = etEmail.getText().toString();
+
+                String type = null;
+                String password = etPassword.getText().toString();
+                String cnic= etcnic.getText().toString();
+                String phone= etphone.getText().toString();
+
+                String typeabd = spinner.getSelectedItem().toString();
+
+                if(typeabd=="Seller")
+                {
+                    type="1";
+
+                }
+                else if(typeabd=="Buyer")
+                {
+                    type="2";
+
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Please Select Type" ,Toast.LENGTH_LONG).show();
+//
+
+                }
+
+                //
+                //String confirm_password = etConfirm_password.getText().toString();
+
+                int value = Integer.parseInt(type);
+
+                if(!name.isEmpty() || !email.isEmpty() ||  !password.isEmpty() ||  !cnic.isEmpty() ||  !phone.isEmpty() ){
+                    UserSignUP(name, email, type, password,cnic,phone);
+                    startActivity(new Intent(sign_up.this,Login.class));
+                }else{
+                    etUser_Name.setError("Please insert UserName");
+                    etEmail.setError("Please insert Email");
+                    //etType.setError("Please insert Type(Seller/Buyer)");
+                    etPassword.setError("Please insert Password");
+                    etcnic.setError("Please insert cnic");
+
+                }
             }
         });
 
+
+
+
+
+    }
+    private void UserSignUP(final String name, final String email, final String type, final String password, final String cnic ,final String phone) {
+        int value=1;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_REGIST,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        builder.setTitle("Server Response");
+                        builder.setMessage("SignUp Successfully");
+                        builder.setPositiveButton("User SignUp Successfully", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                etUser_Name.setText("");
+                                etEmail.setText("");
+                                // etType.setText("");
+                                etPassword.setText("");
+                                etphone.setText("");
+                                etcnic.setText("");
+                            }
+                        });
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(sign_up.this, "SignUp Error! " + error.toString(), Toast.LENGTH_SHORT).show();
+                error.printStackTrace();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("name",name);
+                params.put("email",email);
+                params.put("type", type);
+                params.put("password",password);
+                params.put("cnic",cnic);
+                params.put("phone",phone);
+
+                return params;
+            }
+        };
+        MySingleton.getInstance(sign_up.this).addTorequestquee(stringRequest);
     }
 
-    private void addusermethod(){
+    /*private void addusermethod(){
 
 
         nm=et_username.getText().toString();
@@ -147,5 +268,5 @@ public class sign_up extends AppCompatActivity {
                 }
             }
         }
-    }
+    }*/
 }

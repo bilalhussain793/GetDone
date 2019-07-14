@@ -35,6 +35,30 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Title:"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/tit"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:textColorHint="#000000"
+                android:hint="Title here!"
+                android:layout_width="match_parent"
+                android:paddingLeft="5dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Budget:"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/colorPrimaryDark"
@@ -55,6 +79,7 @@
                 android:layout_width="match_parent"
                 android:paddingLeft="5dp"
                 android:layout_height="40dp"/>
+
 
 
 

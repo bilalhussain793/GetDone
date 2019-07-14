@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".HomeFragment">
 
    <LinearLayout
@@ -58,7 +59,7 @@
                        android:layout_width="30dp"
                        android:layout_height="70dp"
                        android:layout_marginRight="10dp"
-                       android:layout_marginLeft="20dp"
+                       android:layout_marginLeft="50dp"
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
@@ -67,7 +68,7 @@
                        android:layout_width="30dp"
                        android:layout_height="70dp"
                        android:layout_marginRight="10dp"
-                       android:layout_marginLeft="20dp"
+                       android:layout_marginLeft="40dp"
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
@@ -101,7 +102,7 @@
                        android:layout_width="wrap_content"
                        android:layout_height="20dp"
                        android:layout_marginRight="10dp"
-                       android:layout_marginLeft="0dp"
+                       android:layout_marginLeft="20dp"
                        android:layout_weight="0.6"
 
                        android:paddingLeft="0dp"
@@ -111,7 +112,7 @@
                        android:layout_width="wrap_content"
                        android:layout_height="20dp"
                        android:layout_marginRight="10dp"
-                       android:layout_marginLeft="0dp"
+                       android:layout_marginLeft="20dp"
                        android:layout_weight="0.6"
 
                        android:paddingLeft="0dp"
@@ -140,25 +141,25 @@
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
-                       android:src="@drawable/gardening" />
+                       android:src="@drawable/pandd" />
                    <ImageView
                        android:layout_width="30dp"
                        android:layout_height="70dp"
                        android:layout_marginRight="10dp"
-                       android:layout_marginLeft="20dp"
+                       android:layout_marginLeft="50dp"
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
-                       android:src="@drawable/cleaning" />
+                       android:src="@drawable/it" />
                    <ImageView
                        android:layout_width="30dp"
                        android:layout_height="70dp"
                        android:layout_marginRight="10dp"
-                       android:layout_marginLeft="20dp"
+                       android:layout_marginLeft="40dp"
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
-                       android:src="@drawable/homeservice" />
+                       android:src="@drawable/others" />
 
 
 
@@ -175,93 +176,55 @@
                    <!-- place one TextView and one EditText inside layout using weight property -->
 
                    <TextView
+                       android:layout_width="110dp"
+                       android:layout_height="match_parent"
+                       android:layout_marginLeft="0dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_weight="0.6"
+
+                       android:paddingLeft="0dp"
+                       android:src="@drawable/gardening"
+                       android:text="Pickup and Deliver" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="20dp"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginLeft="0dp"
+                       android:layout_weight="0.6"
+
+                       android:paddingLeft="0dp"
+                       android:text="IT Services"
+                       />
+                   <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="20dp"
                        android:layout_marginRight="10dp"
                        android:layout_marginLeft="20dp"
                        android:layout_weight="0.6"
 
-                       android:paddingLeft="10dp"
-                       android:text="Gardening"
-                       android:src="@drawable/gardening" />
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="20dp"
-                       android:layout_marginRight="10dp"
-                       android:layout_marginLeft="0dp"
-                       android:layout_weight="0.6"
-
-                       android:paddingLeft="0dp"
-                       android:text="Cleaning"
-                       />
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="20dp"
-                       android:layout_marginRight="10dp"
-                       android:layout_marginLeft="0dp"
-                       android:layout_weight="0.6"
-
                        android:paddingLeft="0dp"
 
-                       android:text="Home Services" />
+                       android:text="Others" />
 
 
 
                </LinearLayout>
-
-               <LinearLayout
-                   android:id="@+id/text3Layout"
-                   android:layout_width="match_parent"
+               <TextView
+                   android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-
-                   android:paddingLeft="30dp"
-                   android:orientation="horizontal"
-                   android:weightSum="3">
-
-                   <!-- place one TextView and one EditText inside layout using weight property -->
-
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="20dp"
-                       android:layout_marginRight="0dp"
-                       android:layout_marginLeft="20dp"
-                       android:layout_weight="0.6"
-
-                       android:paddingLeft="10dp"
-                       android:text="Gardening"
-                       android:src="@drawable/gardening" />
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="20dp"
-                       android:layout_marginRight="0dp"
-                       android:layout_marginLeft="0dp"
-                       android:layout_weight="0.6"
-
-                       android:paddingLeft="0dp"
-                       android:text="Cleaning"
-                       />
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="20dp"
-                       android:layout_marginRight="0dp"
-                       android:layout_marginLeft="0dp"
-                       android:layout_weight="0.6"
-
-                       android:paddingLeft="0dp"
-
-                       android:text="Home Services" />
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginTop="50dp"
+                   android:text="Recently Posted Tasks:"
+                   android:textColor="@color/colorPrimaryDark"
+                   android:textSize="20dp"
+                   android:textStyle="bold" />
 
 
-
-               </LinearLayout>
-
-               <ListView
+               <android.support.v7.widget.RecyclerView
                    android:id="@+id/recylcerView"
                    android:layout_width="match_parent"
-                   android:layout_height="350dp"
-                   tools:layout_editor_absoluteX="745dp"
-                   tools:layout_editor_absoluteY="-51dp" >
-               </ListView>
+                   android:layout_height="384dp"
+                   android:layout_marginTop="20dp" />
 
 
 

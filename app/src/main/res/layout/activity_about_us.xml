@@ -28,9 +28,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:text="About Us"
-                android:layout_marginLeft="80dp"
+
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="28sp"
+                android:textAlignment="center"
                 android:textStyle="bold"/>
 
             <TextView
@@ -48,15 +49,17 @@
             <TextView
                 android:id="@+id/inputSearchEditText"
 
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginRight="15dp"
-                android:layout_centerVertical="true"
-                android:textColorHint="#000000"
-                android:hint="Content here!"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
                 android:paddingLeft="5dp"
-                android:layout_height="40dp"/>
+                android:text="It is a platform for anyone to outsource their tasks, if you are looking for someone to do your specific task,you can get Skilled people here who can help you get your work done in your budget.On the other side It is a platform for earning money by completing posted tasks of different individuals Online and location near you.For this you have to post the Ad of required task to be done then you will chose the right person for your job by checking ratings, biding the prices. At last wait for it to be done."
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="#000000"
+                android:textSize="19dp" />
 
             <TextView
                 android:id="@+id/inputSearch1EditText"
@@ -69,6 +72,7 @@
                 android:hint="GetDone Pvt. Ltd 2019 \u00A9 All Rights Reserved"
                 android:layout_width="match_parent"
                 android:paddingLeft="5dp"
+                android:textAlignment="center"
                 android:layout_height="40dp"/>
 
 

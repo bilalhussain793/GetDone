@@ -223,6 +223,12 @@
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylcerView"
+                android:layout_width="match_parent"
+                android:layout_height="384dp"
+                android:layout_marginTop="20dp" />
+
 
 
 

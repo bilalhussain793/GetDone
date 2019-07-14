@@ -36,15 +36,16 @@
             <EditText
                 android:id="@+id/amount"
 
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginRight="15dp"
-                android:layout_centerVertical="true"
-                android:textColorHint="#000000"
-                android:hint="Enter your Amount"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Enter your Amount"
                 android:paddingLeft="5dp"
-                android:layout_height="40dp"/>
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="#000000" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -87,10 +88,10 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
-                android:focusable="false"
+
                 android:hint="Enter here!"
                 android:paddingLeft="5dp"
-                android:enabled="false"
+
                 android:textColorHint="#000000"
                 android:visibility="visible" />
 

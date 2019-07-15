@@ -43,6 +43,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
                 android:hint="Enter your Amount"
+                android:inputType="number"
                 android:paddingLeft="5dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="#000000" />
@@ -64,7 +65,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Our Company will charge 6% as service charges."
+                android:text="Our Company will charge 8% as service charges."
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"

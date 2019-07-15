@@ -7,4 +7,6 @@ public class UserDetails {
     static String chatWith = "";
     static String flag = "";
 
+    public static class Get_offer {
+    }
 }

@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -51,6 +52,7 @@ public class HomeFragment extends Fragment {
     private Fragment baseContext;
     private int contentView;
     ListView lv;
+    ImageView gardening,cleaning,it,home,other,pnd;
 
 
 
@@ -58,6 +60,8 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
 // Inflate the layout for this fragment
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -74,6 +78,100 @@ public class HomeFragment extends Fragment {
         //this method will fetch and parse json
         //to display it in recyclerview
         loadProducts();
+        gardening=view.findViewById(R.id.garden);
+        cleaning=view.findViewById(R.id.clean);
+        it=view.findViewById(R.id.it);
+        home=view.findViewById(R.id.home);
+        other=view.findViewById(R.id.other);
+        pnd=view.findViewById(R.id.pnd);
+
+        gardening.setOnClickListener(new View.OnClickListener() {//Calling on click listener for Add Button
+
+            public void onClick(View v)//calling the onClick function
+            {
+                Intent intent = new Intent(v.getContext(), show_categor.class);
+
+
+                intent.putExtra("category", "10");
+
+                v.getContext().startActivity(intent);
+
+
+            }
+        });
+        cleaning.setOnClickListener(new View.OnClickListener() {//Calling on click listener for Add Button
+
+            public void onClick(View v)//calling the onClick function
+            {
+                Intent intent = new Intent(v.getContext(),show_categor.class);
+
+
+                intent.putExtra("category", "9");
+
+                v.getContext().startActivity(intent);
+
+
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {//Calling on click listener for Add Button
+
+            public void onClick(View v)//calling the onClick function
+            {
+                Intent intent = new Intent(v.getContext(),show_categor.class);
+
+
+                intent.putExtra("category", "11");
+
+                v.getContext().startActivity(intent);
+
+
+            }
+        });
+        it.setOnClickListener(new View.OnClickListener() {//Calling on click listener for Add Button
+
+            public void onClick(View v)//calling the onClick function
+            {
+                Intent intent = new Intent(v.getContext(),show_categor.class);
+
+
+                intent.putExtra("category", "12");
+
+                v.getContext().startActivity(intent);
+
+
+            }
+        });
+        other.setOnClickListener(new View.OnClickListener() {//Calling on click listener for Add Button
+
+            public void onClick(View v)//calling the onClick function
+            {
+                Intent intent = new Intent(v.getContext(),show_categor.class);
+
+
+                intent.putExtra("category", "13");
+
+                v.getContext().startActivity(intent);
+
+
+            }
+        });
+
+        pnd.setOnClickListener(new View.OnClickListener() {//Calling on click listener for Add Button
+
+            public void onClick(View v)//calling the onClick function
+            {
+                Intent intent = new Intent(v.getContext(),show_categor.class);
+
+
+                intent.putExtra("category", "8");
+
+                v.getContext().startActivity(intent);
+
+
+            }
+        });
+
+
 
 
 

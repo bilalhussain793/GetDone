@@ -77,26 +77,15 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp" />
 
-            <RadioGroup
+            <Spinner
+                android:id="@+id/spinner1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/rgbb"
-                android:orientation="horizontal">
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:prompt="@string/spinner_title"
 
 
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:text="Physical" />
-                <RadioButton
-                    android:id="@+id/radioButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/txt30"
-                    android:text="Online" />
-            </RadioGroup>
+                />
             <TextView
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"

@@ -21,7 +21,7 @@ import java.util.Map;
 public class update_posted extends AppCompatActivity {
     private EditText budget,title;
     Button click;
-    private String URL_REGIST = "http://192.168.10.13/GetDone/update_posted.php";
+    private String URL_REGIST = "http://192.168.8.100/GetDone/update_posted.php";
     AlertDialog.Builder builder;
 
 

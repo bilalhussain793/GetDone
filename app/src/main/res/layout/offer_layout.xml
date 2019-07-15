@@ -19,18 +19,27 @@
             android:layout_width="180dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Username:"
+                android:textColor="#000"
+                android:textSize="14dp"
+                 />
 
             <TextView
                 android:id="@+id/Name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Do a task"
+                android:layout_marginTop="0dp"
                 android:gravity="center"
+                android:text="Do a task"
                 android:textColor="#000"
-                android:layout_marginTop="30dp"
                 android:textSize="20dp"
                 android:textStyle="bold" />
-
 
 
             <LinearLayout
@@ -50,7 +59,6 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical">
-
 
 
             <TextView

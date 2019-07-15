@@ -54,6 +54,7 @@
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
+                       android:id="@+id/garden"
                        android:src="@drawable/gardening" />
                    <ImageView
                        android:layout_width="30dp"
@@ -63,6 +64,7 @@
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
+                       android:id="@+id/clean"
                        android:src="@drawable/cleaning" />
                    <ImageView
                        android:layout_width="30dp"
@@ -72,6 +74,7 @@
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
+                       android:id="@+id/home"
                        android:src="@drawable/homeservice" />
 
 
@@ -141,6 +144,7 @@
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
+                       android:id="@+id/pnd"
                        android:src="@drawable/pandd" />
                    <ImageView
                        android:layout_width="30dp"
@@ -150,6 +154,7 @@
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
+                       android:id="@+id/it"
                        android:src="@drawable/it" />
                    <ImageView
                        android:layout_width="30dp"
@@ -159,6 +164,7 @@
                        android:layout_weight="0.6"
                        android:gravity="center_vertical"
                        android:paddingLeft="10dp"
+                       android:id="@+id/other"
                        android:src="@drawable/others" />
 
 

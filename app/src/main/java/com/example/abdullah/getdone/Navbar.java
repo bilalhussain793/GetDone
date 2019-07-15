@@ -3,6 +3,7 @@ package com.example.abdullah.getdone;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -19,6 +20,23 @@ public class Navbar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navbar);
+
+        SharedPreferences prefs = getSharedPreferences("LOGIN", MODE_PRIVATE);
+
+        String na=prefs.getString("nm",null);
+
+        if(na==null)
+        {
+            startActivity(new Intent(Navbar.this,Login.class
+            ));
+        }
+        else
+        {
+            UserDetails.username = na;
+        }
+
+
+
         final BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
 

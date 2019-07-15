@@ -49,11 +49,16 @@ public class PostTaskFragment extends Fragment {
     private int contentView;
     AlertDialog.Builder builder;
 
+    String nm =UserDetails.username;
+
     EditText title,etdescription,person,budget,locaton,unm;
-    private String URL_REGIST = "http://192.168.10.13/GetDone/posttask.php";
+    private String URL_REGIST = "http://192.168.8.100/GetDone/posttask.php";
     RadioButton physical,online;
 
     String Title,description,no_of_Persons,Budget,Location;
+    String typeabd = null;
+    String type=null,typetask=null;
+    String Type_of_task=null;
     Button sign;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -69,9 +74,10 @@ public class PostTaskFragment extends Fragment {
         person=view.findViewById(R.id.Personinput);
         budget=view.findViewById(R.id.Budget);
         locaton=view.findViewById(R.id.location);
-        physical= view.findViewById(R.id.radioButton);
-        online=view.findViewById(R.id.radioButton1);
+
+
         sign=view.findViewById(R.id.btn_sign_in);
+
         unm=view.findViewById(R.id.usernames);
         builder = new AlertDialog.Builder(getContext());
 
@@ -93,6 +99,20 @@ public class PostTaskFragment extends Fragment {
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
 
+        final Spinner spinner1 =  view.findViewById(R.id.spinner1);
+        List<String> categories1 = new ArrayList<String>();
+        categories1.add("Select Type of Task");
+        categories1.add("Physical");
+        categories1.add("Online");
+
+
+
+        ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, categories1);
+        // Drop down layout style - list view with radio button
+        dataAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // attaching data adapter to spinner
+        spinner1.setAdapter(dataAdapter1);
+
 
         sign.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,9 +122,11 @@ public class PostTaskFragment extends Fragment {
                 no_of_Persons=person.getText().toString();
                 Budget=budget.getText().toString();
                 Location=locaton.getText().toString();
-                String typeabd = spinner.getSelectedItem().toString();
-                String type=null;
-                String Type_of_task=null;
+
+                typeabd = spinner.getSelectedItem().toString();
+                Type_of_task = spinner.getSelectedItem().toString();
+
+
                 if(typeabd=="Pick Up & Deliver")
                 {
                     type="8";
@@ -145,14 +167,17 @@ public class PostTaskFragment extends Fragment {
 
 
 
-                if(title.length()==0){
+
+
+
+                if(Title.length()==0){
                     title.setError("Empty!");
                 }
                 if(description.length()==0)
                 {
                     etdescription.setError("Empty");
                 }
-                if(person.length()==0)
+                if(no_of_Persons.length()==0)
                 {
                     person.setError("Empty");
                 }
@@ -160,28 +185,18 @@ public class PostTaskFragment extends Fragment {
                 {
                     budget.setError("Empty");
                 }
-                if(locaton.length()==0)
+                if(Location.length()==0)
                 {
                     locaton.setError("Empty");
                 }
-                else{
-
-                    RadioGroup radioGroup=view.findViewById(R.id.rgbb);
-
-                    int selectedId=radioGroup.getCheckedRadioButtonId();
-
-                   if(selectedId == 2131230907)
-                    {
-                        Type_of_task="Physical";
-
-                    }
-                   else if(selectedId == 2131230908)
-                   {
-                       Type_of_task="Online";
-                   }
+                else
+                {
 
 
-                   PostTask(Title, description, no_of_Persons, Budget,Location,type,Type_of_task);
+
+
+
+                   PostTask(Title, description, no_of_Persons, Budget,Location,type,Type_of_task,nm);
 
 
 
@@ -200,7 +215,7 @@ public class PostTaskFragment extends Fragment {
 
     }
 
-    private void PostTask(final String Title, final String description, final String no_of_Persons, final String Budget,final String Location,final String type,final String type_of_task) {
+    private void PostTask(final String Title, final String description, final String no_of_Persons, final String Budget,final String Location,final String type,final String type_of_task,final String Username) {
         int value=1;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_REGIST,
@@ -213,13 +228,13 @@ public class PostTaskFragment extends Fragment {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
 
-                                unm.setText("");
-                                title.setText("");
-                                // etType.setText("");
-                                locaton.setText("");
-                                budget.setText("");
-                                person.setText("");
-                                etdescription.setText("");
+
+//                                title.setText("");
+//                                // etType.setText("");
+//                                locaton.setText("");
+//                                budget.setText("");
+//                                person.setText("");
+//                                etdescription.setText("");
                             }
                         });
                         AlertDialog alertDialog = builder.create();
@@ -244,6 +259,7 @@ public class PostTaskFragment extends Fragment {
                 params.put("no_of_Persons",no_of_Persons);
                 params.put("type",type);
                 params.put("type_of_task",type_of_task);
+                params.put("username",nm);
 
 
 

@@ -32,12 +32,13 @@ public class activity_dtl_task extends AppCompatActivity {
 
     TextView name,type,status,location,budget,last_date,no_persons,type_of_task,desc,Name;
      Button offer;
-    List<get_offer> productList;
+
     private static final String URL_GETDATA = "http://192.168.8.100/GetDone/get_offer.php";
 
     AlertDialog.Builder builder;
     //the recyclerview
     RecyclerView recyclerView;
+    List<Get_offer> productList;
 
 
     @Override
@@ -49,7 +50,7 @@ public class activity_dtl_task extends AppCompatActivity {
         status = findViewById(R.id.stat);
         location = findViewById(R.id.location);
         budget = findViewById(R.id.budget);
-        last_date = findViewById(R.id.lstdate);
+//        last_date = findViewById(R.id.lstdate);
         no_persons = findViewById(R.id.No_of_persons);
         type_of_task = findViewById(R.id.cat);
         offer = findViewById(R.id.btn_off);
@@ -58,6 +59,7 @@ public class activity_dtl_task extends AppCompatActivity {
         builder = new AlertDialog.Builder(activity_dtl_task.this);
 
         Name.setText(UserDetails.username);
+
 
 
 
@@ -73,26 +75,54 @@ public class activity_dtl_task extends AppCompatActivity {
         final String Budget = getIntent().getStringExtra("Budget");
         final String No_Of_Persons = getIntent().getStringExtra("No Of Persons");
 
+        if(Type=="8")
+        {
+            type.setText("Pickup & Delivery");
+
+        }
+        else  if(Type=="9")
+        {
+            type.setText("Cleaning");
+        }
+        else  if(Type=="10")
+        {
+            type.setText("Gardening");
+        }
+        else  if(Type=="11")
+        {
+            type.setText("Home Services");
+        }
+        else  if(Type=="12")
+        {
+            type.setText("It Services");
+        }
+        else  if(Type=="13")
+        {
+            type.setText("Others");
+
+        }
+        else
+        {
+            type.setText("Nothing");
+        }
+
+
+
+
+
         name.setText(Name);
-        type.setText(Type);
+
         status.setText(Status);
         location.setText(Location);
         budget.setText("Rs." + Budget);
-        last_date.setText(Last_Date);
+        //last_date.setText(Last_Date);
         no_persons.setText(No_Of_Persons);
         type_of_task.setText(Type_of_Task);
         desc.setText(Desc);
 
 
-        recyclerView = findViewById(R.id.recylcerView);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //this method will fetch and parse json
-        //to display it in recyclerview
-//        Toast.makeText(activity_dtl_task.this, id.toString(), Toast.LENGTH_SHORT).show();
-        //initializing the productlist
-        productList = new ArrayList<>();
-        loadProducts();
+
+
         UserLogin(id);
 
         offer.setOnClickListener(new View.OnClickListener() {//Calling on click listener for Add Button
@@ -109,58 +139,70 @@ public class activity_dtl_task extends AppCompatActivity {
 
             }
         });
+        recyclerView = findViewById(R.id.recylcerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //initializing the productlist
+        productList = new ArrayList<>();
+//        loadProducts();
     }
-        private void loadProducts(){
+    private void loadProducts() {
 
-            /*
-             * Creating a String Request
-             * The request type is GET defined by first parameter
-             * The URL is defined in the second parameter
-             * Then we have a Response Listener and a Error Listener
-             * In response listener we will get the JSON response as a String
-             * */
-            StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_GETDATA,
-                    new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            try {
-                                //converting the string to json array object
-                                JSONArray array = new JSONArray(response);
+        /*
+         * Creating a String Request
+         * The request type is GET defined by first parameter
+         * The URL is defined in the second parameter
+         * Then we have a Response Listener and a Error Listener
+         * In response listener we will get the JSON response as a String
+         * */
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_GETDATA,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            Toast.makeText(activity_dtl_task.this,response ,Toast.LENGTH_LONG).show();
 
-                                //traversing through all the object
-                                for (int i = 0; i < array.length(); i++) {
+                            //converting the string to json array object
+                            JSONArray array = new JSONArray(response);
 
-                                    //getting product object from json array
-                                    JSONObject product = array.getJSONObject(i);
+                            //traversing through all the object
+                            for (int i = 0; i < array.length(); i++) {
 
-                                    //adding the product to product list
-                                    productList.add(new get_offer(
-                                            product.getInt("gig_id"),
-                                            product.getString("buyer_name"),
+                                //getting product object from json array
+                                JSONObject product = array.getJSONObject(i);
 
-                                            product.getString("amount")
+                                //adding the product to product list
+                                productList.add(new Get_offer(
+                                        product.getInt("gig_id"),
+                                        product.getString("buyer_name"),
+                                        product.getString("amount")
 
-                                    ));
-                                }
 
-                                //creating adapter object and setting it to recyclerview
-                                OfferAdapter adapter = new OfferAdapter(activity_dtl_task.this, productList);
-                                recyclerView.setAdapter(adapter);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                                ));
                             }
-                        }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
 
+                            //creating adapter object and setting it to recyclerview
+                            OffersAdapter adapter = new OffersAdapter(activity_dtl_task.this, productList);
+                            recyclerView.setAdapter(adapter);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
-                    });
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
 
-            //adding our stringrequest to queue
-            Volley.newRequestQueue(this).add(stringRequest);
-        }
+                    }
+                });
+
+        //adding our stringrequest to queue
+        Volley.newRequestQueue(this).add(stringRequest);
+    }
+
+
+
 
     private void UserLogin(final String id) {
 
@@ -179,6 +221,34 @@ public class activity_dtl_task extends AppCompatActivity {
                         });
                         AlertDialog alertDialog = builder.create();
                         alertDialog.show();
+                        try {
+                            Toast.makeText(activity_dtl_task.this,response ,Toast.LENGTH_LONG).show();
+
+                            //converting the string to json array object
+                            JSONArray array = new JSONArray(response);
+
+                            //traversing through all the object
+                            for (int i = 0; i < array.length(); i++) {
+
+                                //getting product object from json array
+                                JSONObject product = array.getJSONObject(i);
+
+                                //adding the product to product list
+                                productList.add(new Get_offer(
+                                        product.getInt("gig_id"),
+                                        product.getString("buyer_name"),
+                                        product.getString("amount")
+
+
+                                ));
+                            }
+
+                            //creating adapter object and setting it to recyclerview
+                            OffersAdapter adapter = new OffersAdapter(activity_dtl_task.this, productList);
+                            recyclerView.setAdapter(adapter);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 },
                 new Response.ErrorListener() {

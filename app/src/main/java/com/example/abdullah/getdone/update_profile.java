@@ -2,11 +2,9 @@ package com.example.abdullah.getdone;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,11 +17,6 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,9 +27,9 @@ public class update_profile extends AppCompatActivity {
 
     Button click;
     EditText username,email,phone,password,confirmpassword,cnic;
-    private String URL_REGIST = "http://192.168.10.13/GetDone/update_profile.php";
+    private String URL_REGIST = "http://192.168.8.100/GetDone/update_profile.php";
     AlertDialog.Builder builder;
-
+    String nm =UserDetails.username;
     String Name,Email,Phone,Pass,Confirm,Cnic;
 
     @Override
@@ -52,6 +45,8 @@ public class update_profile extends AppCompatActivity {
         cnic=findViewById(R.id.cnic);
 
         click=findViewById(R.id.update);
+        username.setText(nm);
+
 
 
 
@@ -239,5 +234,12 @@ public class update_profile extends AppCompatActivity {
     }
 
 
+    public static class show_category extends AppCompatActivity {
 
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_show_category);
+        }
+    }
 }

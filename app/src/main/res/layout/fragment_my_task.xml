@@ -13,14 +13,13 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+
             android:scrollbars="none">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginLeft="15dp">
+                >
 
 
 
@@ -43,14 +42,15 @@
                     android:layout_marginBottom="10dp"
                     android:textSize="22sp"
                     android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
                     />
+
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recylcerView"
+                    android:id="@+id/recylcerView1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="216dp"
                     tools:layout_editor_absoluteX="745dp"
-                    tools:layout_editor_absoluteY="-51dp" >
-                </android.support.v7.widget.RecyclerView>
+                    tools:layout_editor_absoluteY="-51dp"></android.support.v7.widget.RecyclerView>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -61,14 +61,15 @@
                     android:layout_marginBottom="10dp"
                     android:textSize="22sp"
                     android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
                     />
+
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recylcerView2"
+                    android:id="@+id/recylcerView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="335dp"
                     tools:layout_editor_absoluteX="745dp"
-                    tools:layout_editor_absoluteY="-51dp" >
-                </android.support.v7.widget.RecyclerView>
+                    tools:layout_editor_absoluteY="-51dp"></android.support.v7.widget.RecyclerView>
 
 
 

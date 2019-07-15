@@ -43,7 +43,7 @@ public class Login extends AppCompatActivity {
     FirebaseUserAdapter firebaseUserAdapter=new FirebaseUserAdapter();
     TextView reg_btn;
     String Name,Password;
-    private String URL_REGIST = "http://192.168.0.74/GetDone/login.php";
+    private String URL_REGIST = "http://192.168.8.100/GetDone/login.php";
     AlertDialog.Builder builder;
 
     ProgressDialog pd;
@@ -65,7 +65,7 @@ public class Login extends AppCompatActivity {
 
 
      /*   SharedPreferences prefs = getSharedPreferences("LOGIN", MODE_PRIVATE);
-        int r = prefs.getInt("flg", 0);
+
         String na=prefs.getString("nm",null);
         UserDetails.username=na;
 
@@ -87,7 +87,12 @@ public class Login extends AppCompatActivity {
 
                 if(!Name.isEmpty() || !Password.isEmpty()  ){
                     Userlogin(Name, Password);
-                    startActivity(new Intent(Login.this,Navbar.class));
+                    SharedPreferences.Editor editor = getSharedPreferences("LOGIN", MODE_PRIVATE).edit();
+
+                    editor.putString("nm",Name);
+                    editor.apply();
+
+
 
                 }else{
                     et_n.setError("Please insert Name");
@@ -139,6 +144,7 @@ public class Login extends AppCompatActivity {
                             editor.putInt("flg", 2);
                             editor.putString("nm",NM.getText().toString());
                             editor.apply();
+
                             UserDetails.username=NM.getText().toString();
                             startActivity(new Intent(Login.this,Navbar.class));
                             pd.dismiss();
@@ -182,6 +188,7 @@ public class Login extends AppCompatActivity {
                     public void onResponse(String response) {
                         builder.setTitle("Server Response");
                         builder.setMessage("Login Successfully");
+                        startActivity(new Intent(Login.this,Navbar.class));
                         builder.setPositiveButton("User SignUp Successfully", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

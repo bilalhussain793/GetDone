@@ -154,7 +154,7 @@
 
                 android:minLines="1"
 
-                android:gravity="center|left"
+                android:gravity="left"
 
 
 

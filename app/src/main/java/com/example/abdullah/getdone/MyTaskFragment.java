@@ -35,14 +35,14 @@ import java.util.Map;
 
 
 public class MyTaskFragment extends Fragment {
-    private static final String URL_GETDATA = "http://192.168.8.100/GetDone/get_my_post.php";
+    private static final String URL_GETDATA =UserDetails.Url+ "get_my_post.php";
 
     AlertDialog.Builder builder;
     //the recyclerview
     RecyclerView recyclerView;
     public static List<Get_post> productList;
 
-    private static final String URL_GETDATA1 = "http://192.168.0.105/GetDone/get_my_offer.php";
+    private static final String URL_GETDATA1 = UserDetails.Url+"get_my_offer.php";
 
 
     RecyclerView recyclerView1;
@@ -136,13 +136,15 @@ public class MyTaskFragment extends Fragment {
                                         product.getString("type_of_task"),
                                         product.getString("budget"),
                                         product.getString("location"),
-                                        product.getInt("no_of_persons")
+                                        product.getInt("no_of_persons"),
+                                        product.getString("username")
+
 
                                 ));
                             }
 
                             //creating adapter object and setting it to recyclerview
-                            PostAdapter adapter = new PostAdapter(getActivity(), productList);
+                            NewPostAdapter adapter = new NewPostAdapter (getActivity(), productList);
                             recyclerView.setAdapter(adapter);
 
 

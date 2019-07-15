@@ -25,7 +25,7 @@ import java.util.Map;
 public class offer extends AppCompatActivity {
 EditText price,why;
 CheckBox agree;
-    private static String URL_LOGIN = "http://192.168.0.105/GetDone/offer.php";
+    private static String URL_LOGIN = UserDetails.Url+"offer.php";
     AlertDialog.Builder builder;
 Button offer;
 

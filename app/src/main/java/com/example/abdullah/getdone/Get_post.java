@@ -11,10 +11,11 @@ public class Get_post {
     private String status;
     private String budget;
     private String location;
+    private String poster;
     private int no_of_persons;
 
 
-    public Get_post(int id, String name, String description, String last_date,String type,String status, String date,String type_of_task,String budget,String location,int no_of_persons) {
+    public Get_post(int id, String name, String description, String last_date,String type,String status, String date,String type_of_task,String budget,String location,int no_of_persons,String poster) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -26,6 +27,7 @@ public class Get_post {
         this.budget = budget;
         this.location = location;
         this.no_of_persons = no_of_persons;
+        this.poster = poster;
     }
 
     public int getId() {
@@ -60,12 +62,16 @@ public class Get_post {
     public String getBudget() {
         return budget;
     }
+    public String getPoster() {
+        return poster;
+    }
     public String getLocation() {
         return location;
     }
     public int getNo_of_persons() {
         return no_of_persons;
     }
+
 
 
 }

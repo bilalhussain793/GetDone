@@ -44,7 +44,7 @@ String value1 = "1";
 
                                                 public void onClick( View v)//calling the onClick function
                                                 {
-                                                    Intent intent = new Intent(v.getContext(),activity_dtl_task.class);
+                                                    Intent intent = new Intent(v.getContext(),activity_dtl_task_offer.class);
 
                                                     intent.putExtra("id",String.valueOf(product.getId()));
                                                     intent.putExtra("Name",String.valueOf(product.getName()));

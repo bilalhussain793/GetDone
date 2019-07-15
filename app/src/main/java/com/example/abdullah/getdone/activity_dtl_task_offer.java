@@ -28,10 +28,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class activity_dtl_task extends AppCompatActivity {
+public class activity_dtl_task_offer extends AppCompatActivity {
 
-    TextView name,type,status,location,budget,last_date,no_persons,type_of_task,desc,Nameabd;
-     Button offer;
+    TextView name,type,status,location,budget,last_date,no_persons,type_of_task,desc,Name;
+    Button offer;
 
     private static final String URL_GETDATA =  UserDetails.Url +"get_offer.php";
 
@@ -44,7 +44,7 @@ public class activity_dtl_task extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dtl_task);
+        setContentView(R.layout.activity_dtl_task_offer);
         name = findViewById(R.id.tvtitle);
         type = findViewById(R.id.typ);
         status = findViewById(R.id.stat);
@@ -55,10 +55,10 @@ public class activity_dtl_task extends AppCompatActivity {
         type_of_task = findViewById(R.id.cat);
         offer = findViewById(R.id.btn_off);
         desc = findViewById(R.id.dsc);
-        Nameabd = findViewById(R.id.nam);
-        builder = new AlertDialog.Builder(activity_dtl_task.this);
+        Name = findViewById(R.id.nam);
+        builder = new AlertDialog.Builder(this);
 
-
+        Name.setText(UserDetails.username);
 
 
 
@@ -74,7 +74,6 @@ public class activity_dtl_task extends AppCompatActivity {
         final String Type_of_Task = getIntent().getStringExtra("Type of Task");
         final String Budget = getIntent().getStringExtra("Budget");
         final String No_Of_Persons = getIntent().getStringExtra("No Of Persons");
-        final String username = getIntent().getStringExtra("username");
 
         if(Type=="8")
         {
@@ -112,7 +111,6 @@ public class activity_dtl_task extends AppCompatActivity {
 
 
         name.setText(Name);
-        Nameabd.setText(username);
 
         status.setText(Status);
         location.setText(Location);
@@ -163,7 +161,7 @@ public class activity_dtl_task extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            Toast.makeText(activity_dtl_task.this,response ,Toast.LENGTH_LONG).show();
+                            Toast.makeText(activity_dtl_task_offer.this,response ,Toast.LENGTH_LONG).show();
 
                             //converting the string to json array object
                             JSONArray array = new JSONArray(response);
@@ -185,7 +183,7 @@ public class activity_dtl_task extends AppCompatActivity {
                             }
 
                             //creating adapter object and setting it to recyclerview
-                            OffersAdapter adapter = new OffersAdapter(activity_dtl_task.this, productList);
+                            MyOffersAdapter adapter = new MyOffersAdapter(activity_dtl_task_offer.this, productList);
                             recyclerView.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -224,7 +222,7 @@ public class activity_dtl_task extends AppCompatActivity {
                         AlertDialog alertDialog = builder.create();
                         alertDialog.show();
                         try {
-                            Toast.makeText(activity_dtl_task.this,response ,Toast.LENGTH_LONG).show();
+                            Toast.makeText(activity_dtl_task_offer.this,response ,Toast.LENGTH_LONG).show();
 
                             //converting the string to json array object
                             JSONArray array = new JSONArray(response);
@@ -246,7 +244,7 @@ public class activity_dtl_task extends AppCompatActivity {
                             }
 
                             //creating adapter object and setting it to recyclerview
-                            OffersAdapter adapter = new OffersAdapter(activity_dtl_task.this, productList);
+                            MyOffersAdapter adapter = new MyOffersAdapter(activity_dtl_task_offer.this, productList);
                             recyclerView.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -256,7 +254,7 @@ public class activity_dtl_task extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(activity_dtl_task.this, "Login Error! " + error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity_dtl_task_offer.this, "Login Error! " + error.toString(), Toast.LENGTH_SHORT).show();
                         error.printStackTrace();
                     }
                 })
@@ -269,10 +267,8 @@ public class activity_dtl_task extends AppCompatActivity {
                 return params;
             }
         };
-        MySingleton.getInstance(activity_dtl_task.this).addTorequestquee(stringRequest);
+        MySingleton.getInstance(activity_dtl_task_offer.this).addTorequestquee(stringRequest);
     }
 
 
-
-    }
-
+}

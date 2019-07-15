@@ -40,7 +40,7 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private static final String URL_GETDATA = "http://192.168.0.105/GetDone/get_post.php";
+    private static final String URL_GETDATA = UserDetails.Url +"get_post.php";
 
     //a list to store all the products
     List<Get_post> productList;
@@ -214,7 +214,8 @@ public class HomeFragment extends Fragment {
                                         product.getString("type_of_task"),
                                         product.getString("budget"),
                                         product.getString("location"),
-                                        product.getInt("no_of_persons")
+                                        product.getInt("no_of_persons"),
+                                        product.getString("username")
 
                                 ));
                             }

@@ -27,7 +27,7 @@ public class update_profile extends AppCompatActivity {
 
     Button click;
     EditText username,email,phone,password,confirmpassword,cnic;
-    private String URL_REGIST = "http://192.168.8.100/GetDone/update_profile.php";
+    private String URL_REGIST = UserDetails.Url+"update_profile.php";
     AlertDialog.Builder builder;
     String nm =UserDetails.username;
     String Name,Email,Phone,Pass,Confirm,Cnic;

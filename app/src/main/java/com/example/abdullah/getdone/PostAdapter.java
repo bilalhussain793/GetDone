@@ -61,6 +61,7 @@ String value1 = "1";
                                                     intent.putExtra("Type of Task",String.valueOf(product.getType_of_task()));
                                                     intent.putExtra("Budget",String.valueOf(product.getBudget()));
                                                     intent.putExtra("No Of Persons",String.valueOf(product.getNo_of_persons()));
+                                                    intent.putExtra("username",String.valueOf(product.getPoster()));
 
                                                     v.getContext().startActivity(intent);
 

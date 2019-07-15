@@ -25,8 +25,8 @@ public class contact_us extends AppCompatActivity {
 EditText Name,Email,Subject,Message;
 Button send;
 String name,email,subject,mess;
-    private String URL_REGIST = "http://192.168.0.105/GetDone/contact.php";
     AlertDialog.Builder builder;
+    private String URL_REGIST = UserDetails.Url +"/contact.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

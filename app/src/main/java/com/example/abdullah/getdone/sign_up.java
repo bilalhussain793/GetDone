@@ -41,7 +41,7 @@ public class sign_up extends AppCompatActivity {
     private EditText etUser_Name, etEmail, etPassword, etConfirm_password, etcnic,etphone;
     private Button btnSignUp;
     // private Spinner spinnerType;#10.0.02.2
-    private String URL_REGIST = "http://192.168.8.100/GetDone/register.php";
+    private String URL_REGIST = "http://192.168.0.105/GetDone/register.php";
     AlertDialog.Builder builder;
 
 

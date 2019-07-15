@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 public class show_categor extends AppCompatActivity {
-    private static final String URL_GETDATA = "http://192.168.8.100/GetDone/get_post_category.php";
+    private static final String URL_GETDATA = "http://192.168.0.105/GetDone/get_post_category.php";
 
     AlertDialog.Builder builder;
     //the recyclerview

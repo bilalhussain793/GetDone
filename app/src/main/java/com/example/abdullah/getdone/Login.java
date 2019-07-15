@@ -43,7 +43,7 @@ public class Login extends AppCompatActivity {
     FirebaseUserAdapter firebaseUserAdapter=new FirebaseUserAdapter();
     TextView reg_btn;
     String Name,Password;
-    private String URL_REGIST = "http://192.168.8.100/GetDone/login.php";
+    private String URL_REGIST = "http://192.168.0.105/GetDone/login.php";
     AlertDialog.Builder builder;
 
     ProgressDialog pd;
@@ -165,7 +165,6 @@ public class Login extends AppCompatActivity {
                 }else {
                     NM.setError("Invalid User");
                 }
-
             }
 
             @Override

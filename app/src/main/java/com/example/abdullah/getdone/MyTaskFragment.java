@@ -40,9 +40,9 @@ public class MyTaskFragment extends Fragment {
     AlertDialog.Builder builder;
     //the recyclerview
     RecyclerView recyclerView;
-    List<Get_post> productList;
+    public static List<Get_post> productList;
 
-    private static final String URL_GETDATA1 = "http://192.168.8.100/GetDone/get_my_offer.php";
+    private static final String URL_GETDATA1 = "http://192.168.0.105/GetDone/get_my_offer.php";
 
 
     RecyclerView recyclerView1;
@@ -144,6 +144,8 @@ public class MyTaskFragment extends Fragment {
                             //creating adapter object and setting it to recyclerview
                             PostAdapter adapter = new PostAdapter(getActivity(), productList);
                             recyclerView.setAdapter(adapter);
+
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -167,7 +169,9 @@ public class MyTaskFragment extends Fragment {
         };
         MySingleton.getInstance(getActivity()).addTorequestquee(stringRequest);
     }
+    public static void runinit(){
 
+    }
     private void UserLogin1(final String username) {
 
         final StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_GETDATA1,
@@ -205,11 +209,13 @@ public class MyTaskFragment extends Fragment {
 
 
                                 ));
+
                             }
 
                             //creating adapter object and setting it to recyclerview
                             OffersAdapter adapter = new OffersAdapter(getActivity(), productList1);
                             recyclerView1.setAdapter(adapter);
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -233,4 +239,5 @@ public class MyTaskFragment extends Fragment {
         };
         MySingleton.getInstance(getActivity()).addTorequestquee(stringRequest);
     }
+
 }

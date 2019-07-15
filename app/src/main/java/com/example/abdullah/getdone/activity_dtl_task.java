@@ -33,7 +33,7 @@ public class activity_dtl_task extends AppCompatActivity {
     TextView name,type,status,location,budget,last_date,no_persons,type_of_task,desc,Name;
      Button offer;
 
-    private static final String URL_GETDATA = "http://192.168.8.100/GetDone/get_offer.php";
+    private static final String URL_GETDATA = "http://192.168.0.105/GetDone/get_offer.php";
 
     AlertDialog.Builder builder;
     //the recyclerview

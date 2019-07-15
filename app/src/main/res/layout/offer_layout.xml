@@ -9,9 +9,8 @@
 
     <LinearLayout
         android:layout_width="400dp"
-        android:layout_height="120dp"
+        android:layout_height="110dp"
         android:orientation="horizontal"
-
         android:padding="20dp">
 
 
@@ -70,7 +69,11 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
                 android:textStyle="bold" />
+            <Button
+                android:layout_height="40dp"
+                android:layout_width="100dp"
+                android:text="Chat"
+                android:id="@+id/cht"/>
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

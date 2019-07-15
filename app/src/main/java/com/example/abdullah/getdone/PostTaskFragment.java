@@ -52,7 +52,7 @@ public class PostTaskFragment extends Fragment {
     String nm =UserDetails.username;
 
     EditText title,etdescription,person,budget,locaton,unm;
-    private String URL_REGIST = "http://192.168.8.100/GetDone/posttask.php";
+    private String URL_REGIST = "http://192.168.0.105/GetDone/posttask.php";
     RadioButton physical,online;
 
     String Title,description,no_of_Persons,Budget,Location;

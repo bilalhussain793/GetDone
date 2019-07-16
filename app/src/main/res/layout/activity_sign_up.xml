@@ -66,14 +66,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="0" />
 
-        <Button
-            android:id="@+id/buttonLoadPicture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0"
-            android:text="Click to get picture" />
-
 
         <ScrollView
             android:layout_width="wrap_content"
@@ -237,13 +229,7 @@
                     android:textColorHint="@color/txt_hint"
                     android:textSize="@dimen/txt16" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/space5"
-                    android:text="Picture"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/txt10" />
+
 
 
             </LinearLayout>

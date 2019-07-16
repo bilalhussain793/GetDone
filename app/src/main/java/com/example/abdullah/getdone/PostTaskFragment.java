@@ -124,7 +124,7 @@ public class PostTaskFragment extends Fragment {
                 Location=locaton.getText().toString();
 
                 typeabd = spinner.getSelectedItem().toString();
-                Type_of_task = spinner.getSelectedItem().toString();
+                Type_of_task = spinner1.getSelectedItem().toString();
 
 
                 if(typeabd=="Pick Up & Deliver")
@@ -203,8 +203,7 @@ public class PostTaskFragment extends Fragment {
 
                     //Toast.makeText(getContext(),String.valueOf(selectedId),Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(getContext(), "Task Posted\n Successful", Toast.LENGTH_SHORT).show();
-                    //here write
+
                 }
 
             }

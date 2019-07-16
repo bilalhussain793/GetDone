@@ -163,7 +163,6 @@ public class activity_dtl_task extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
-                            Toast.makeText(activity_dtl_task.this,response ,Toast.LENGTH_LONG).show();
 
                             //converting the string to json array object
                             JSONArray array = new JSONArray(response);
@@ -213,18 +212,15 @@ public class activity_dtl_task extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
 
-                        builder.setTitle("Server Response");
-                        builder.setMessage("Response:" + response);
-                        builder.setPositiveButton("User Login Successfully", new DialogInterface.OnClickListener() {
+                         builder.setPositiveButton("User Login Successfully", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
 
                             }
                         });
                         AlertDialog alertDialog = builder.create();
-                        alertDialog.show();
+                        //alertDialog.show();
                         try {
-                            Toast.makeText(activity_dtl_task.this,response ,Toast.LENGTH_LONG).show();
 
                             //converting the string to json array object
                             JSONArray array = new JSONArray(response);

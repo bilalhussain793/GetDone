@@ -13,7 +13,7 @@
         android:id="@+id/iv_logo"
         android:layout_width="321dp"
         android:layout_height="86dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="@dimen/btn_height"
         android:src="@drawable/main_logo"
         tools:srcCompat="@drawable/main_logo" />

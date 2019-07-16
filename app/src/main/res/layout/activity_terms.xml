@@ -37,25 +37,125 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1.GetDone provides the GetDone Platform only, enabling Users to publish Posted Tasks and make
-Offers on Posted Tasks.\n\n
-2.Users must be natural persons, but can specify within their account description that they represent
-a business entity.\n\n
-3.At its absolute discretion, GetDone may refuse to allow any person to register or create an account
-with GetDone or cancel or suspend or modify any existing account including if GetDone reasonably
-forms the view that a User&#39;s conduct (including a breach of this Agreement) is detrimental to the
-operation of the GetDone Platform.\n\n
-4.Registering and creating an account with GetDone is free. There is no charge for a Poster to post
-tasks, or for other GetDone Users to review content on the GetDone Platform, including Posted Tasks.\n
-\n
-5.GetDone accepts no liability for any aspect of the Poster and Tasker interaction, including but not
-limited to the description, performance or delivery of Services.\n\n
-6.GetDone has no responsibility and makes no warranty as to the truth or accuracy of any aspect of
-any information provided by Users, including, but not limited to, the ability of Taskers to perform
-tasks or supply items, or the honesty or accuracy of any information provided by Posters or the
-Posters&#39; ability to pay for the Services requested.\n\n
-7.GetDone has no obligation to any User to assist or involve itself in any dispute between Users,
-although may do so to improve User experience.\n
+                android:text="1. SCOPE OF GETDONE SERVICES\n
+•	1.1 GetDone provides the GetDone Platform to enable Posters to publish Posted Tasks.\n
+\n•	1.2 Taskers may make an Offer in response to a Posted Task. Some parts of Offer details may be made publicly available, including to internet users who are not Users.
+\n•	1.3 A Poster may revoke or modify a Posted Task at any time before he/she accepts an Offer. GetDone reserves the right to cancel all Offers on a Posted Task made prior to the modification.
+\n•	1.4 If a Poster accepts an Offer on the GetDone Platform, a Task Contract is created between the Tasker and the Poster.
+\n•	1.5 Upon creation of a Task Contract, the Poster must pay the Agreed Price into the Payment Account.
+\n•	1.6 Upon creation of the Task Contract, GetDone has rendered GetDone Services and the Service Fee is due and payable.
+\n•	1.7 Once the Task Contract is created, the Tasker and Poster may vary the Task Contract on the GetDone Platform. The Poster and Tasker are encouraged to use GetDone's private messaging system to amend or vary the Task Contract (including the Agreed Price) or to otherwise communicate.
+\n•	1.8 Once the Services are complete, the Tasker must provide notice of that on the GetDone Platform.
+\n•	1.9 Once the Services are complete, the Poster must provide notice of that on the GetDone Platform.
+\n•	1.10 Once the Posted Task has been completed and the Poster confirms the Services are completed, or if GetDone is satisfied the Services have been completed, the Tasker Funds will be released by GetDone from the Payment Account to the Tasker.
+\n•	1.11 After the Task Contract is completed, the parties are encouraged to review and provide feedback of the Services on the GetDone Platform.
+\n•	1.12 GetDone may also provide a Search Assist feature enabling Posters to submit an Offer for Services.
+\n•	1.13 An Offer submitted by a Poster using Search Assist may be notified to other Users and such Users may elect to make an Instant Claim of it.
+\n•	1.14 When using Search Assist a Task Contract is created when a Tasker makes an Instant Claim.
+\n•	1.15 A Poster may revoke or modify its Offer in using Search Assist at any time before a Tasker makes an Instant Claim. GetDone reserves the right to cancel all Posted Tasks made prior to the revocation or modification.
+\n2. GETDONE'S ROLE AND OBLIGATIONS
+\n•	2.1 GetDone provides the GetDone Platform only, enabling Users to publish Posted Tasks and make Offers on Posted Tasks.
+\n•	2.2 Users must be natural persons, but can specify within their account description that they represent a business entity.
+\n•	2.3 At its absolute discretion, GetDone may refuse to allow any person to register or create an account with GetDone or cancel or suspend or modify any existing account including if GetDone reasonably forms the view that a User's conduct (including a breach of this Agreement) is detrimental to the operation of the GetDone Platform.
+\n•	2.4 Registering and creating an account with GetDone is free. There is no charge for a Poster to post tasks, or for other GetDone Users to review content on the GetDone Platform, including Posted Tasks.
+\n•	2.5 GetDone accepts no liability for any aspect of the Poster and Tasker interaction, including but not limited to the description, performance or delivery of Services.
+\n•	2.6 GetDone has no responsibility and makes no warranty as to the truth or accuracy of any aspect of any information provided by Users, including, but not limited to, the ability of Taskers to perform tasks or supply items, or the honesty or accuracy of any information provided by Posters or the Posters' ability to pay for the Services requested.
+\n•	2.7 GetDone has no obligation to any User to assist or involve itself in any dispute between Users, although may do so to improve User experience.
+\n3. USER OBLIGATIONS
+\n•	3.1 You will at all times:
+\no	(a) comply with this Agreement (including all Policies) and all applicable laws and regulations;
+\no	(b) only post accurate information on the GetDone Platform;
+\no	(c) ensure that You are aware of any laws that apply to You as a Poster or Tasker, or in relation to using the GetDone Platform.
+\n•	3.2 You agree that any content (whether provided by GetDone, a User or a third party) on the GetDone Platform may not be used on third party sites or for other business purposes without GetDone's prior permission.
+\n•	3.3 You must not use the GetDone Platform for any illegal or immoral purpose.
+\n•	3.4 You must maintain control of Your GetDone account at all times. This includes not allowing others to use Your account, or by transferring or selling Your account or any of its content to another person.
+\n•	3.5 You agree that any information posted on the GetDone Platform must not, in any way whatsoever, be potentially or actually harmful to GetDone or any other person. Harm includes, but is not limited to, economic loss that will or may be suffered by GetDone.
+\n•	3.6 Without limiting any provision of this Agreement, any information You supply to GetDone or publish in a Posted Task (including as part of an Offer) must be up to date and kept up to date and must not:
+\n*(a) be false, inaccurate or misleading or deceptive;
+\n*(b) be fraudulent or involve the sale of counterfeit or stolen items;
+\n*(c) infringe any third party's copyright, patent, trademark, trade secret or other proprietary rights or intellectual property rights, rights of publicity, confidentiality or privacy;
+\n*(d) violate any applicable law, statute, ordinance or regulation (including, but not limited to, those governing export and import control, consumer protection, unfair competition, criminal law, antidiscrimination and trade practices/fair trading laws);
+\n*(e) be defamatory, libellous, threatening or harassing;
+\n*(g) contain any malicious code, data or set of instructions that intentionally or unintentionally causes harm or subverts the intended function of any GetDone Platform, including, but not limited to viruses, trojan horses, worms, time bombs, cancelbots, easter eggs or other computer programming routines that may damage, modify, delete, detrimentally interfere with, surreptitiously intercept, access without authority or expropriate any system, data or Personal Information.
+\n•	3.7 GetDone Platform may from time to time engage location-based or map-based functionality. The GetDone Platform may display the location of Posters and Taskers to persons browsing the GetDone Platform. A Poster should never disclose personal details such as the Poster's full name, street number, phone number or email address in a Posted Task or in any other public communication on the GetDone Platform.
+\n•	3.8 If You are a Tasker, You must have the right to provide Services under a Task Contract and to work in the jurisdiction where the Services are performed. You must comply with tax and regulatory obligations in relation to any payment (including Tasker Funds) received under a Task Contract.
+\n•	3.9 You must not, when supplying Services, charge a Poster any fees on top of the Tasker Funds. However, the parties to a Task Contract may agree to amend the Agreed Price through the GetDone Platform.
+\n•	3.10 You must not request payments outside of the GetDone Platform from the Poster for the Services except to the extent permitted by clause 3.12 and only if the GetDone Platform does not facilitate the reimbursement via the Payment Account of costs considered in clause 3.12.
+\n•	3.12 If a Tasker agrees to pay some costs of completing the Services (such as equipment to complete the Services), the Tasker is solely responsible for obtaining any reimbursement from the Poster. GetDone advises Taskers not to agree to incur costs in advance of receiving the payment for these costs, unless the Tasker is confident the Poster will reimburse the costs promptly.
+\n•	3.13 If GetDone determines at its sole discretion that You have breached any obligation under this clause 3 or that You have breached one or more Task Contracts, it reserves the rights to remove any content, Posted Task or Offer You have submitted to the GetDone Service or cancel or suspend Your account and/or any Task Contracts.
+\n4. FEES
+\n•	4.1 Upon the creation of a Task Contract, the Tasker owes GetDone the Service Fee. The Service Fee will automatically be deducted from the Agreed Price held in the Payment Account.
+\n•	4.2 If the Posted Task requires a Tasker to incur costs in completing the Services, the cost incurred will not be included in any calculation of Fees.
+\n•	4.3 Fees do not include any fees that may be due to Third Party Service providers. All Third Party Service providers are paid pursuant to a User's separate agreement with that Third Party Service provider.
+\n•	4.4 All Fees and charges payable to GetDone are non-cancellable and non-refundable, save for Your rights under any Non-Excludable Conditions.
+\n•	4.5 If GetDone introduces a new service on the GetDone Platform, the Fees applying to that service will be payable as from the launch of the service.
+\n•	4.6 GetDone may set-off any Fees against any Tasker Funds or other amounts held by GetDone on behalf of a User.
+\n•	4.7 GetDone may restrict a User's account until all Fees have been paid.
+\n5. PAYMENTS AND REFUNDS
+\n•	5.1 If the Task Contract is cancelled for any reason (by a Poster, a Tasker or under this Agreement) prior to the commencement of the Task Contract, then if GetDone is reasonably satisfied that the Agreed Price should be returned to the Poster then the Agreed Price will be refunded to the Poster as Stored Value and a Cancellation Admin Fee will be due to GetDone by the User who the cancellation of the Task Contract is attributable to under clause.
+\n•	5.2 Any amount returned by GetDone to a Poster on behalf of a Tasker under clause 5.1 will be a debt owed by the Tasker to GetDone and may be offset by GetDone against any other payments owed at any time to the Tasker.
+\n•	5.3 Cancellation of a Task Contract will be attributable to the Tasker where:
+\no	(a) the Poster and the Tasker mutually agree to cancel the Task Contract; or
+\no	(b) following reasonable but unsuccessful attempts by a Poster to contact a Tasker to perform the Task Contract, the Task Contract is cancelled by the Poster; or
+\no	(c) the Tasker cancels the Task Contract; or
+\no	(d) a Task Contract is cancelled in accordance with clause 3.14 as a result of the Tasker’s actions or breach.
+\n•	5.4 A Cancellation of a Task Contract will be attributable to a Poster where:
+\no	(a) the Poster cancels the Task Contract (other than in accordance with clause 5.5(b); or
+\no	(b) a Task Contract is cancelled in accordance with clause 3.14 as a result of the Poster’s actions or breach..
+\n•	5.5 If the parties agree to any additional cancellation fee payable under the Task Contract, it is the responsibility of the party aggrieved to claim any amount owed directly from the other.
+\n•	5.6 GetDone may take up to 15 days to return the Agreed Price (less the Cancellation Admin Fee, if applicable) to the Poster.
+\n•	5.7 If, for any reason, the Tasker Funds cannot be transferred or otherwise made to the Tasker or returned to the Poster (as the case may be) or no claim is otherwise made for the Tasker Funds, the Tasker Funds will remain in the Payment Account until paid or otherwise for up to three months from the date the Poster initially paid the Agreed Price into the Payment Account.
+\n•	5.8 If the Task Contract is cancelled and a User who is party to the Task Contract can show that work under a Task Contract was commenced, then the amount of the Agreed Price to be returned to the Poster will be conditional upon the mediation and dispute process in clause 18. However, the Cancellation Admin Fee will always be due in accordance with clause 5.1.
+
+
+\n6. BUSINESS PARTNERS
+\n•	6.1 GetDone may enter into agreements with Business Partners and may seek to engage Taskers in the provision of Business Services. Taskers who agree to perform Business Services for Business Partners acknowledge and agree that GetDone and the Business Partner may on-sell Services supplied to third parties for an increased fee.
+\n•	6.2 Business Partners may require Taskers to enter into a Business Partner Contract before providing Business Services.
+\n•	6.3 Where a Tasker accepts a Posted Task with a Business Partner:
+\no	(a) the Tasker must provide Business Services to the Business Partner in accordance with the Task Contract and any applicable Business Partner Contract; and
+\no	(b) the terms of the Business Partner Contract will prevail to the extent of any inconsistency.
+
+\n7. PAYMENT FACILITY
+\n•	7.1 GetDone uses a Payment Provider to operate the Payment Account.
+\n•	7.2 If GetDone changes its Payment Provider You may be asked to agree to any further additional terms with those providers. If you do not agree to them, you will be given alternative means of payment.
+\n8. VERIFICATION
+\n•	8.1 GetDone may use Identity Verification Services.
+\n•	8.2 You agree that GetDone Identity Verification Services may not be fully accurate as all GetDone Services are dependent on User-supplied information and/or information or Verification Services provided by third parties.
+\n•	8.3 You are solely responsible for identity verification and GetDone accepts no responsibility for any use that is made of an GetDone Identity Verification Service.
+\n•	8.4 GetDone Identity Verification Services may be modified at any time.
+\n•	8.5 The GetDone Platform may also include a User-initiated feedback system to help evaluate Users.
+\n9. INSURANCE
+\n•	9.1 GetDone may offer its Users an opportunity to obtain insurance for certain Task Contracts. All such insurance will be offered by a third party. Any application and terms and conditions for such third party insurance will be displayed on the GetDone website when they are available. GetDone confirms that all insurance policies are Third Party Services and governed by further terms set out for Third Party Services.
+\n•	9.2 GetDone does not represent that any insurance it acquires or which is offered via the GetDone Platform is adequate or appropriate for any particular User. Each User must make its own enquiries about whether any further insurance is required.
+\n•	9.3 GetDone may also take out other insurance itself and that insurance may at GetDone's option extend some types of cover to Users. GetDone reserves the right to change the terms of its insurance policies with the third party insurance providers at any time. A summary of the policies are available on the GetDone website and the policy details can be requested via GetDone. Users are responsible for familiarising themselves with these details.
+\n•	9.4 The Tasker acknowledges and agrees that in the event that a claim is made relating to any services performed and/or goods provided by a Tasker, and the insurance taken out by GetDone (if any) does not respond to the claim or the claim is below the excess payable to the insurer, then this clause applies. GetDone may elect to pay an amount to settle the claim. To the extent that the Tasker was or would be liable for the amount of the claim, the amount paid by GetDone may be recovered by GetDone from the Tasker. GetDone may also elect to set this amount off against future moneys it may owe to the Tasker.
+\n10. FEEDBACK
+\n•	10.1 You can complain about any comment made on the GetDone Platform using the 'Report' function of the GetDone Platform or contact GetDone via the GetDone Platform.
+\n•	10.2 GetDone is entitled to suspend or terminate Your account at any time if GetDone, in its sole and absolute discretion, is concerned by any feedback about You, or considers Your feedback rating to be problematic for other GetDone Users.
+\n11. PRIVACY
+\n•	11.1 Prior to acceptance of any service from a third party, You must review and agree to their terms of service including their privacy policy.
+\n•	11.2 GetDone will endeavour to permit you to transact anonymously on the GetDone Platform. However in order to ensure GetDone can reduce the incidence of fraud and other behaviour in breach of the Community Guidelines, GetDone reserves the right to ask Users to verify themselves in order to remain a User.
+\n12. MODIFICATIONS TO THE AGREEMENT
+\n•	12.1 GetDone may modify this Agreement or the Policies (and update the GetDone pages on which they are displayed) from time to time. GetDone will send notification of such modifications to Your GetDone account or advise You the next time You login.
+\n•	12.2 When You actively agree to amended terms (for example, by clicking a button saying I accept) or use the GetDone Platform in any manner, including engaging in any acts in connection with a Task Contract, the amended terms will be effective immediately. In all other cases, the amended terms will automatically be effective 15 days after they are initially notified to You.
+\n•	12.3 If You do not agree with any changes to this Agreement (or any of our Policies), You must either terminate your account or You must notify GetDone who will terminate Your GetDone account, and stop using the GetDone Service.
+\n13. NOTICES
+\n•	13.1 Except as stated otherwise, any notices must be given by registered ordinary post or by email, either to GetDone's contact address as displayed on the GetDone Platform, or to GetDone Users' contact address as provided at registration. Any notice shall be deemed given:
+\no	(a) if sent by email, 24 hours after email is sent, unless the User is notified that the email address is invalid or the email is undeliverable, and
+\no	(b) if sent by pre-paid post, three Business Days after the date of posting, or on the seventh Business Day after the date of posting if sent to or posted from outside the jurisdiction in which You have Your GetDone Platform account..
+\n14. MEDIATION AND DISPUTE RESOLUTION
+\n•	14.1 GetDone encourages You to try and resolve disputes (including claims for returns or refunds) with other Users directly. Accordingly, You acknowledge and agree that GetDone may, in its absolute discretion, provide Your information as it decides is suitable to other parties involved in the dispute.
+\n•	14.2 If a dispute arises with another User, You must co-operate with the other User and make a genuine attempt to resolve the dispute.
+\n•	14.3 GetDone may elect to assist Users resolve disputes. Any User may refer a dispute to GetDone. You must co-operate with any investigation undertaken by GetDone. GetDone reserves the right to make a final determination (acting reasonably) based on the information supplied by the Users and direct the Payment Provider to make payment accordingly. You may raise your dispute with the other User or GetDone's determination in an applicable court or tribunal.
+\n•	14.4 GetDone has the right to hold any Agreed Price that is the subject of a dispute in the Payment Account, until the dispute has been resolved..
+\n•	14.5 If You have a complaint about the GetDone Service please contact us here.
+\n•	14.6 If GetDone provides information about other Users to You for the purposes of resolving disputes under this clause, You acknowledge and agree that such information will be used only for the purpose of resolving the dispute (and no other purpose) and that you will be responsible and liable to GetDone for any costs, losses or liabilities incurred by GetDone in relation to any claims relating to any other use of information not permitted by this Agreement.
+\n15. TERMINATION
+\n•	15.1 Either You or GetDone may terminate your account and this Agreement at any time for any reason.
+\n•	15.2 Termination of this Agreement does not affect any Task Contract that has been formed between GetDone Users.
+\n•	15.3 If Your account or this Agreement are terminated for any reason then You may not without GetDone's consent (in its absolute discretion) create any further accounts with GetDone and we may terminate any other accounts You operate.
+
+
 "
                 android:layout_marginTop="0dp"
                 android:textColor="@color/colorPrimaryDark"

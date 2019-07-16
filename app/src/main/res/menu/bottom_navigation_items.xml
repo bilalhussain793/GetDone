@@ -15,11 +15,12 @@
 
     <item
         android:id="@+id/action_item4"
-        android:icon="@drawable/ic_assignment_ind_black_24dp"
+        android:icon="@drawable/message"
         android:title="Messages"/>
     <item
         android:id="@+id/action_item5"
-        android:icon="@drawable/ic_assignment_ind_black_24dp"
-        android:title="More"/>
+        android:icon="@android:drawable/ic_menu_more"
+
+        android:title="More" />
 
 </menu>

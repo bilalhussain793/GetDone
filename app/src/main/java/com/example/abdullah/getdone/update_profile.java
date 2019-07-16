@@ -193,7 +193,7 @@ public class update_profile extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         builder.setTitle("Server Response");
-                        builder.setMessage("SignUp Successfully");
+                        builder.setMessage("Updated Successfully");
                         builder.setPositiveButton("User SignUp Successfully", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

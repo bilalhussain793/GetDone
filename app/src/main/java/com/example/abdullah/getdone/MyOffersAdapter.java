@@ -62,13 +62,14 @@ public class MyOffersAdapter extends RecyclerView.Adapter<MyOffersAdapter.Produc
                 UserDetails.chatWith=product.getbuyer_name();
                 mCtx.startActivity(new Intent(mCtx,Chat.class));
 
+
             }
         });
         holder.btn_status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                status = "assigned";
+                status = "2";
                 gig_id = String.valueOf(product.getId());
                 status_update(status,gig_id);
 

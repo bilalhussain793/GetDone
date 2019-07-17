@@ -61,7 +61,7 @@ public class activity_dtl_task_offer extends AppCompatActivity {
         Name.setText(UserDetails.username);
 
 
-
+        String category=null;
 
         final String id = getIntent().getStringExtra("id");
         final String Name = getIntent().getStringExtra("Name");
@@ -75,43 +75,44 @@ public class activity_dtl_task_offer extends AppCompatActivity {
         final String Budget = getIntent().getStringExtra("Budget");
         final String No_Of_Persons = getIntent().getStringExtra("No Of Persons");
 
-        if(Type=="8")
+        if(Type.equals("8"))
         {
-            type.setText("Pickup & Delivery");
+
+            category= "Pickup & Delivery";
+
 
         }
-        else  if(Type=="9")
+        if(Type.equals("9"))
         {
-            type.setText("Cleaning");
+            category= "Cleaning";
+        }if(Type.equals("10"))
+        {
+            category= "Gardening";
         }
-        else  if(Type=="10")
+        if(Type.equals("11"))
         {
-            type.setText("Gardening");
+            category= "Home Services";
         }
-        else  if(Type=="11")
+        if(Type.equals("12"))
         {
-            type.setText("Home Services");
+            category= "It Services";
         }
-        else  if(Type=="12")
+        if(Type.equals("13"))
         {
-            type.setText("It Services");
-        }
-        else  if(Type=="13")
-        {
-            type.setText("Others");
+            category="Others";
 
         }
-        else
-        {
-            type.setText("Nothing");
-        }
+//        else
+//        {
+//            type.setText("Nothing");
+//        }
 
 
 
 
 
         name.setText(Name);
-
+        type.setText(category);
         status.setText(Status);
         location.setText(Location);
         budget.setText("Rs." + Budget);

@@ -69,8 +69,8 @@ public class sign_up extends AppCompatActivity {
         final Spinner spinner =  findViewById(R.id.spinner);
         List<String> categories = new ArrayList<String>();
         categories.add("Select type");
-        categories.add("Buyer");
-        categories.add("Seller");
+        categories.add("Post a task");
+        categories.add("Earn Money");
 
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);

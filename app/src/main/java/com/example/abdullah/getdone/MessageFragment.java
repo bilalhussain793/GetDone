@@ -120,6 +120,7 @@ public class MessageFragment extends Fragment {
         else{
             noUsersText.setVisibility(View.GONE);
             usersList.setVisibility(View.VISIBLE);
+            al.add(UserDetails.chatWith);
 
             usersList.setAdapter(new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, al));
         }

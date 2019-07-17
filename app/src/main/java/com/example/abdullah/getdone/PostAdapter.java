@@ -18,6 +18,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ProductViewHol
 
 
     private Context mCtx;
+    private String status = null;
     private List<Get_post> productList;
 
     public PostAdapter(Context mCtx, List<Get_post> productList) {
@@ -42,7 +43,16 @@ String value1 = "1";
         holder.textViewTitle.setText(product.getName());
         holder.textViewlocation.setText(product.getLocation());
         holder.textViewbudget.setText("Rs." +String.valueOf(product.getBudget()));
-       holder.btn_status.setText(product.getStatus());
+        if(product.getStatus().equals("1"))
+        {
+            status="Open";
+        }
+        else  if(product.getStatus().equals("2"))
+        {
+            status="Assigned";
+        }
+
+       holder.btn_status.setText(status);
        holder.btn_status.setOnClickListener(new View.OnClickListener(){//Calling on click listener for Add Button
 
                                                 public void onClick( View v)//calling the onClick function
@@ -55,9 +65,9 @@ String value1 = "1";
 
                                                     intent.putExtra("Last Date",String.valueOf(product.getLastDate()));
                                                     intent.putExtra("Date",String.valueOf(product.getDate()));
-                                                    intent.putExtra("Status",String.valueOf(product.getStatus()));
+                                                    intent.putExtra("Status",String.valueOf(status));
                                                     intent.putExtra("Location",String.valueOf(product.getLocation()));
-                                                    intent.putExtra("Type",String.valueOf(product.getType()));
+                                                    intent.putExtra("Type",(product.getType()));
                                                     intent.putExtra("Type of Task",String.valueOf(product.getType_of_task()));
                                                     intent.putExtra("Budget",String.valueOf(product.getBudget()));
                                                     intent.putExtra("No Of Persons",String.valueOf(product.getNo_of_persons()));

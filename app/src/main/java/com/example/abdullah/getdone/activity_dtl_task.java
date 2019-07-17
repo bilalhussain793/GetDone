@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class activity_dtl_task extends AppCompatActivity {
 
-    TextView name,type,status,location,budget,last_date,no_persons,type_of_task,desc,Nameabd;
+    TextView name,categories,status,location,budget,last_date,no_persons,type_of_task,desc,Nameabd;
      Button offer;
 
     private static final String URL_GETDATA =  UserDetails.Url +"get_offer.php";
@@ -46,7 +46,7 @@ public class activity_dtl_task extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dtl_task);
         name = findViewById(R.id.tvtitle);
-        type = findViewById(R.id.typ);
+        categories = findViewById(R.id.typ);
         status = findViewById(R.id.stat);
         location = findViewById(R.id.location);
         budget = findViewById(R.id.budget);
@@ -61,7 +61,7 @@ public class activity_dtl_task extends AppCompatActivity {
 
 
 
-
+        String category=null;
 
         final String id = getIntent().getStringExtra("id");
         final String Name = getIntent().getStringExtra("Name");
@@ -70,42 +70,43 @@ public class activity_dtl_task extends AppCompatActivity {
         final String Date = getIntent().getStringExtra("Date");
         final String Status = getIntent().getStringExtra("Status");
         final String Location = getIntent().getStringExtra("Location");
-        final String Type = getIntent().getStringExtra("Type");
+         String Type = getIntent().getStringExtra("Type");
         final String Type_of_Task = getIntent().getStringExtra("Type of Task");
         final String Budget = getIntent().getStringExtra("Budget");
         final String No_Of_Persons = getIntent().getStringExtra("No Of Persons");
         final String username = getIntent().getStringExtra("username");
 
-        if(Type=="8")
+        if(Type.equals("8"))
         {
-            type.setText("Pickup & Delivery");
+
+           category= "Pickup & Delivery";
+
 
         }
-        else  if(Type=="9")
+        if(Type.equals("9"))
         {
-            type.setText("Cleaning");
+            category= "Cleaning";
+        }if(Type.equals("10"))
+        {
+           category= "Gardening";
         }
-        else  if(Type=="10")
+        if(Type.equals("11"))
         {
-            type.setText("Gardening");
+           category= "Home Services";
         }
-        else  if(Type=="11")
+        if(Type.equals("12"))
         {
-            type.setText("Home Services");
+            category= "It Services";
         }
-        else  if(Type=="12")
+        if(Type.equals("13"))
         {
-            type.setText("It Services");
-        }
-        else  if(Type=="13")
-        {
-            type.setText("Others");
+            category="Others";
 
         }
-        else
-        {
-            type.setText("Nothing");
-        }
+//        else
+//        {
+//            type.setText("Nothing");
+//        }
 
 
 
@@ -116,12 +117,12 @@ public class activity_dtl_task extends AppCompatActivity {
 
         status.setText(Status);
         location.setText(Location);
+        categories.setText(category);
         budget.setText("Rs." + Budget);
         //last_date.setText(Last_Date);
         no_persons.setText(No_Of_Persons);
         type_of_task.setText(Type_of_Task);
         desc.setText(Desc);
-
 
 
 
